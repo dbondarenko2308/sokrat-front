@@ -1,0 +1,125 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.sk-banner {
+  margin-top: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-top: 80px;
+  }
+
+  &__inner {
+    background: url('../../../images/sk-banner-first.png') 50% 50%;
+    padding: 50px;
+    min-height: 700px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 991px) {
+      padding: 15px;
+
+      background: url('../../../images/sk-banner-first-mobile.png') 50% 50%;
+      background-size: cover;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__top {
+    max-width: 600px;
+  }
+
+  &__text {
+    color: $lgray;
+    margin-bottom: 50px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn {
+    max-width: 170px;
+    gap: 15px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 830px;
+    grid-gap: 40px;
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  &__item {
+    color: #fff;
+    padding-left: 10px;
+    border-left: 1px solid $Darkestgray;
+
+    span {
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    p {
+      color: $lgray;
+    }
+  }
+
+  &-white {
+    margin-top: 40px;
+    margin-bottom: 140px;
+
+    @media only screen and (max-width: 991px) {
+      margin-top: 30px;
+      margin-bottom: 80px;
+    }
+
+    .sk-banner {
+      &__inner {
+        background: url('../../../images/sk-banner-second.png');
+        background-size: cover;
+      }
+
+      &__title {
+        color: #202020;
+      }
+
+      &__text {
+        color: $Darkestgray;
+      }
+
+      &__btn {
+        max-width: 226px;
+      }
+
+      &__item {
+        border-left: 1px solid #cad3d9;
+        span {
+          color: $primary;
+        }
+
+        p {
+          color: #202020;
+        }
+      }
+    }
+  }
+}

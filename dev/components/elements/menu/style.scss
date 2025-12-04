@@ -1,0 +1,87 @@
+@use '../../../style/scss/variables.scss' as *;
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 53px;
+
+    @media only screen and (max-width: 1400px) {
+      gap: 15px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    
+    &.dropdown {
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        background: transparent;
+        bottom: -30px;
+      }
+    }
+    &.dropdown.is-open {
+      .menu__item--list {
+        opacity: 1;
+        visibility: visible;
+        z-index: 10;
+      }
+
+      a {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+
+      @media only screen and (max-width: 1100px) {
+        font-size: 14px;
+      }
+
+      svg {
+        transition: 300ms;
+      }
+
+      
+    }
+
+    &--list {
+      position: absolute;
+      border-radius: 20px;
+      border: 1px solid #cad3d9;
+      background: #fff;
+      padding: 30px 15px;
+      left: 50%;
+      top: 110%;
+      width: 100%;
+      transform: translateX(-50%);
+      min-width: 259px;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__sub {
+    &-list {
+      .menu__item {
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

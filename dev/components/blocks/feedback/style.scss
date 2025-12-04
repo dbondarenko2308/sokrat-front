@@ -1,0 +1,65 @@
+@use '../../../style/scss/variables.scss' as *;
+.feedback {
+  margin-bottom: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+
+  
+  &__inner {
+    display: grid;
+    grid-template-columns: 410px 650px;
+    justify-content: space-between;
+    padding: 50px;
+    background: $lgray;
+    border-radius: 20px;
+
+    @media only screen and (max-width: 1500px) {
+      grid-template-columns: 1fr 1.5fr;
+      grid-gap: 20px;
+    }
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+      padding: 15px;
+    }
+  }
+  &__info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 991px) {
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    color: $primary;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-bottom: 20px;
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .checkbox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    transition: 300ms;
+  }
+}
