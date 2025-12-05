@@ -82,18 +82,37 @@ $(document).ready(function() {
 		$(this).next().toggleClass('active')
 	})
 
-	if (window.innerWidth > 991) {
-		$('.menu__item.dropdown').hover(
-			function() {
-				$(this).addClass('is-open')
-			},
-			function() {
-				$(this).removeClass('is-open')
+	$(function() {
+		function initMenu() {
+			if (window.innerWidth > 991) {
+				$('.menu__item.dropdown')
+					.off('click')
+					.off('mouseenter mouseleave')
+					.hover(
+						function() {
+							$(this).addClass('is-open')
+						},
+						function() {
+							$(this).removeClass('is-open')
+						}
+					)
+			} else {
+				$('.menu__item.dropdown')
+					.off('mouseenter mouseleave')
+					.off('click')
+					.on('click', function(e) {
+						e.preventDefault()
+						$(this).toggleClass('is-open')
+					})
 			}
-		)
-	}
+		}
+
+		initMenu()
+		$(window).on('resize', initMenu)
+	})
 
 	$('.header__catalog--top').on('click', function() {
+		$(this).toggleClass('active')
 		$('.header-catalog').toggleClass('active')
 		$('body').toggleClass('hidden')
 	})
@@ -162,13 +181,39 @@ $(document).ready(function() {
 		})
 	})
 
+	$('.header__burger').on('click', function() {
+		$(this).toggleClass('active')
+		$('.header-mobile').toggleClass('active')
+		$('body').toggleClass('menu')
+
+		const svg = $(this).find('svg')
+
+		if ($(this).hasClass('active')) {
+			svg.html(`
+  <path d="M15 15L5 5M15 5L5 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    `)
+		} else {
+			svg.html(`
+  <path d="M4.16797 14.1667H15.8346M4.16797 10H15.8346M4.16797 5.83334H15.8346" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    `)
+		}
+	})
+
 	$('.header-top__country').on('click', function() {
 		$('.search-country').addClass('active')
 		$('body').addClass('hidden')
 		$('.overhidden').addClass('active')
+
+		$('.header-mobile').removeClass('active')
+		const burger = $('.header__burger')
+		burger.removeClass('active')
+		$('body').removeClass('menu')
+
+		burger.find('svg').html(`
+    <path d="M4.16797 14.1667H15.8346M4.16797 10H15.8346M4.16797 5.83334H15.8346" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  `)
 	})
 
-	
 	$('.search-country__close').on('click', function() {
 		$('.search-country').removeClass('active')
 		$('body').removeClass('hidden')
@@ -178,9 +223,15 @@ $(document).ready(function() {
 	$('.header-search').on('click', function() {
 		$(this).addClass('active')
 		$('.overhidden').addClass('active')
+		$('.header-mobile').removeClass('active')
+		const burger = $('.header__burger')
+		burger.removeClass('active')
+		$('body').removeClass('menu')
+
+		burger.find('svg').html(`
+    <path d="M4.16797 14.1667H15.8346M4.16797 10H15.8346M4.16797 5.83334H15.8346" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  `)
 	})
-
-
 
 	$('.overhidden').on('click', function() {
 		$('.search-country').removeClass('active')
@@ -189,7 +240,6 @@ $(document).ready(function() {
 		$('.header-search-content').removeClass('active')
 		$('.header-search').removeClass('active')
 	})
-
 })
 
 

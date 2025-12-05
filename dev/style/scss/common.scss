@@ -70,6 +70,9 @@ body {
     overflow: hidden;
   }
 
+  &.menu {
+    overflow: hidden;
+  }
   &.select-close {
     overflow-x: hidden;
   }
@@ -346,7 +349,6 @@ ul {
   width: 100%;
   display: none;
 
-
   @media only screen and (max-width: 991px) {
     padding: 30px 15px;
     height: 100%;
@@ -387,15 +389,51 @@ ul {
     margin-top: 50px;
     margin-bottom: 30px;
     display: block;
+    width: auto;
+    height: auto;
+    height: 50px;
+
+    input {
+      display: block;
+    }
+
+    &.active {
+      @media only screen and (max-width: 991px) {
+        height: 50px;
+        input {
+          position: relative;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 50px;
+        }
+      }
+    }
+
+    &__container {
+      &.has-value {
+        .header-search__btn {
+          background: $primary;
+        }
+      }
+    }
+
+    .header-search__btn {
+      top: 52%;
+      right: 5px;
+      @media only screen and (max-width: 991px) {
+        background: #fff;
+        right: 10px;
+        top: 50%;
+        
+      }
+    }
 
     @media only screen and (max-width: 991px) {
       margin-top: 30px;
     }
 
-
     &__clear {
-    
-
       @media only screen and (max-width: 991px) {
         right: 55px;
       }
@@ -417,6 +455,10 @@ ul {
     align-items: center;
     gap: 15px;
 
+    @media only screen and (max-width: 991px) {
+      flex-wrap: wrap;
+    }
+
     span {
       background: $lgray;
       padding: 10px;
@@ -431,7 +473,7 @@ ul {
     margin-top: 30px;
 
     @media only screen and (max-width: 991px) {
-      height: calc(100vh - 330px);
+      height: calc(100vh - 402px);
     }
 
     &::-webkit-scrollbar {
