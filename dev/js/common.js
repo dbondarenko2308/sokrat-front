@@ -113,7 +113,7 @@ $(document).ready(function() {
 	$('.header__catalog--top').on('click', function() {
 		$(this).toggleClass('active')
 		$('.header-catalog').toggleClass('active')
-		$('body').toggleClass('hidden')
+		$('.header').toggleClass('fixed')
 	})
 
 	$('.search-country .header-search__container input').on('input', function() {
@@ -127,6 +127,25 @@ $(document).ready(function() {
 				$(this).hide()
 			}
 		})
+	})
+
+	let lastScroll = 0
+	const $header = $('.header')
+
+	$(window).on('scroll', function() {
+		let currentScroll = $(this).scrollTop()
+
+		if (currentScroll > lastScroll && currentScroll > 50) {
+			$header.removeClass('scroll')
+		} else if (currentScroll < lastScroll && currentScroll > 50) {
+			$header.addClass('scroll')
+		}
+
+		if (currentScroll <= 50) {
+			$header.removeClass('scroll')
+		}
+
+		lastScroll = currentScroll
 	})
 
 	$('.search-country').each(function() {
@@ -238,5 +257,48 @@ $(document).ready(function() {
 		$('.overhidden').removeClass('active')
 		$('.header-search-content').removeClass('active')
 		$('.header-search').removeClass('active')
+	})
+
+	$.fancybox.defaults.touch = false
+	$.fancybox.defaults.closeExisting = true
+
+	const $button = $('.down-up')
+	const bottomOffset = 20
+
+	$button.on('click', function() {
+		$('html, body').animate({ scrollTop: 0 }, 600)
+	})
+
+	$(window).on('scroll resize', function() {
+		const scrollTop = $(window).scrollTop()
+		const windowHeight = $(window).height()
+		const windowWidth = $(window).width()
+		let footerTop
+
+		if (windowWidth < 991) {
+			footerTop = $('.footer').offset().top - 160
+		} else {
+			footerTop = $('.footer').offset().top - 160
+		}
+
+		const stopPoint = footerTop - windowHeight + bottomOffset + 300
+
+		if (scrollTop > 200) {
+			$button.addClass('show')
+		} else {
+			$button.removeClass('show')
+		}
+
+		if (scrollTop > stopPoint) {
+			$button.addClass('active').css({
+				top: footerTop + 190 + 'px',
+				bottom: 'auto'
+			})
+		} else {
+			$button.removeClass('active').css({
+				top: 'auto',
+				bottom: '55px'
+			})
+		}
 	})
 })

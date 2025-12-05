@@ -127,7 +127,7 @@
     }
 
     &.compressed {
-      margin-left: -41px;
+      margin-left: -37px;
 
       @media only screen and (max-width: 1500px) {
         margin-left: 0;
@@ -146,7 +146,12 @@
         opacity: 1;
         visibility: visible;
         width: auto;
-        margin-left: 20px;
+        margin-left: 10px;
+        max-width: 200px;
+
+        @media only screen and (max-width: 1500px) {
+          margin-left: 20px !important;
+        }
       }
     }
   }

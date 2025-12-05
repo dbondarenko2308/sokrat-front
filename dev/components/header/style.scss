@@ -2,6 +2,22 @@
 
 .header {
   padding: 20px 0;
+  transition: 300ms;
+  &.fixed {
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  &.scroll {
+    background: #fff;
+    transition: 300ms;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
 
   @media only screen and (max-width: 991px) {
     padding: 15px 0;
@@ -154,12 +170,9 @@
         transition: 300ms;
       }
 
-      @media only screen and (max-width: 991px) {
-        &.active {
-
-          svg {
-            transform: rotate(180deg);
-          }
+      &.active {
+        svg {
+          transform: rotate(180deg);
         }
       }
 
@@ -174,13 +187,11 @@
     z-index: 100;
     left: 0;
     width: 100%;
-    height: calc(100vh - 264px);
+
     top: 244px;
     display: none;
-    overflow: auto;
 
     @media only screen and (max-width: 1200px) {
-      height: calc(100vh - 300px);
       top: 270px;
     }
 
@@ -204,14 +215,28 @@
       display: grid;
       grid-template-columns: 1fr 320px;
       grid-gap: 30px;
-      //
     }
 
     &__items {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 20px;
+      height: 500px;
+      overflow: auto;
+      padding-right: 20px;
+      margin-right: -20px;
 
+      &::-webkit-scrollbar {
+        width: 10px;
+        background: $lgray;
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 10px;
+        background: $gray;
+        border-radius: 10px;
+      }
       @media only screen and (max-width: 1400px) {
         grid-template-columns: 1fr 1fr;
       }
@@ -267,11 +292,6 @@
       cursor: pointer;
       transition: 300ms;
 
-      &:hover {
-        background: $primary;
-        color: #fff;
-      }
-
       span {
         font-size: 25px;
         font-weight: 700;
@@ -285,6 +305,7 @@
       display: flex;
       align-items: flex-end;
       mix-blend-mode: darken;
+      margin: -20px;
     }
   }
 
@@ -589,7 +610,6 @@
       padding: 20px 15px 30px;
       overflow: auto;
 
-      
       &::before {
         position: absolute;
         display: block;

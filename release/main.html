@@ -73,7 +73,7 @@
 
                   <a href="#" class="header-top__number">8 (800) 333-66-70</a>
 
-                  <a href="#" class="header-top__btn btn btn-blue"
+                  <a href="#modal" data-fancybox class="header-top__btn btn btn-blue"
                     >Оставить заявку</a
                   >
                 </div>
@@ -1145,7 +1145,7 @@
                 </div>
 
 
-                <a href="#" class="header-mobile__btn btn btn-blue">Оставить заявку</a>
+                <a href="#modal" data-fancybox class="header-mobile__btn btn btn-blue">Оставить заявку</a>
 </div>
 
         </div>
@@ -1159,6 +1159,7 @@
           <div class="showcase__item swiper-slide">
             <div class="showcase__img">
               <img src="images/showcase-banner.png" alt="" />
+              <img src="images/showcase-banner-mobile.png" class="mobile"  alt="">
             </div>
             <div class="showcase__info">
               <h1 class="showcase__title title">
@@ -1193,6 +1194,7 @@
           <div class="showcase__item swiper-slide">
             <div class="showcase__img">
               <img src="images/showcase-banner.png" alt="" />
+              <img src="images/showcase-banner-mobile.png" class="mobile"  alt="">
             </div>
             <div class="showcase__info">
               <h1 class="showcase__title title">
@@ -1227,6 +1229,7 @@
           <div class="showcase__item swiper-slide">
             <div class="showcase__img">
               <img src="images/showcase-banner.png" alt="" />
+              <img src="images/showcase-banner-mobile.png" class="mobile"  alt="">
             </div>
             <div class="showcase__info">
               <h1 class="showcase__title title">
@@ -1463,7 +1466,7 @@
           <div class="pritok__icon">
             <img src="images/pr1.png" alt="" />
           </div>
-          <div class="pritok__text">Для физических лиц</div>
+          <div class="pritok__text">Для бизнеса и промышленных объектов</div>
         </div>
         <div class="pritok__grid swiper-slide">
           <div class="pritok__icon">
@@ -2236,6 +2239,60 @@
 
 
 <div class="overhidden"></div>
+
+
+
+<div class="modal" id="modal">
+
+
+  <div class="modal__close" data-fancybox-close>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M18 18L6 6M18 6L6 18" stroke="#CAD3D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+  </div> 
+
+  <div class="modal__content">
+    <h1 class="feedback__title title">Нужна консультация?</h1>
+  </div>
+   <div class="feedback__text">
+          Подробно расскажем о наших услугах, видах работ и типовых проектах,
+          рассчитаем стоимость и подготовим индивидуальное предложение!
+        </div>
+         <div class="feedback__form">
+        <form action="#">
+          <div class="feedback__top">
+            <label class="field">
+              <input type="text" placeholder="Имя" />
+            </label>
+            <label class="field">
+              <input type="text" placeholder="Телефон" class="mask" />
+            </label>
+          </div>
+          <label class="field">
+            <input type="text" placeholder="Комментарий" />
+          </label>
+          <label class="checkbox">
+            <span class="checkbox__inner">
+              <input type="checkbox" />
+              <span></span>
+            </span>
+            <span class="checkbox__text">
+              Я даю свое согласие на обработку персональных данных, в
+              соответствии с ФЗ от 27.07.2006 года №152-ФЗ «О персональных
+              данных», на условиях и для целей, определенных в
+              <a href="#">Согласии на обработку персональных данных</a>
+            </span>
+          </label>
+
+          <button class="feedback__btn btn btn-blue">Оставить заявку</button>
+        </form>
+      </div>
+</div>
+
+
+<div class="down-up">
+	<img src="images/up.svg" alt="">
+</div>
 
 
 
