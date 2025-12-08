@@ -287,6 +287,7 @@ ul {
 .field {
   display: block;
 
+ 
   input {
     width: 100%;
     height: 52px;
@@ -319,6 +320,16 @@ ul {
       color: $Darkestgray;
     }
   }
+
+   &-error {
+    input {
+      color: #A00;
+      border: 1px solid #A00;
+
+      
+    }
+  }
+
 }
 
 .overhidden {
@@ -434,6 +445,19 @@ ul {
     }
 
     &__clear {
+      top: 53%;
+
+      @media only screen and (max-width: 991px) {
+        top: 50%;
+      }
+
+      &:hover {
+        svg {
+          path {
+            stroke: $primary;
+          }
+        }
+      }
       @media only screen and (max-width: 991px) {
         right: 55px;
       }
@@ -463,6 +487,13 @@ ul {
       background: $lgray;
       padding: 10px;
       border-radius: 10px;
+      transition: 300ms;
+      cursor: pointer;
+
+      &:hover {
+        background: $primary;
+        color: #fff;
+      }
     }
   }
 
@@ -500,6 +531,12 @@ ul {
     }
     li {
       list-style: none;
+
+      a {
+        &:hover {
+          color: $primary;
+        }
+      }
     }
   }
 }
@@ -608,14 +645,11 @@ ul {
     right: 15px;
     width: 40px;
     height: 40px;
-
   }
 
- 
   &.active {
     position: absolute;
   }
-
 
   &.show {
     display: flex;

@@ -55,6 +55,10 @@
       a {
         svg {
           transform: rotate(180deg);
+          
+          path {
+            stroke: $primary;
+          }
         }
         
       }
@@ -99,7 +103,7 @@
       border-radius: 20px;
       border: 1px solid #cad3d9;
       background: #fff;
-      padding: 30px 15px;
+      padding: 30px ;
       left: 50%;
       top: 110%;
       width: 100%;

@@ -282,24 +282,25 @@ $(document).ready(function() {
 			footerTop = $('.footer').offset().top - 160
 		}
 
-		const stopPoint = footerTop - windowHeight + bottomOffset + 300
-
 		if (scrollTop > 200) {
 			$button.addClass('show')
 		} else {
 			$button.removeClass('show')
 		}
 
-		if (scrollTop > stopPoint) {
-			$button.addClass('active').css({
-				top: footerTop + 190 + 'px',
-				bottom: 'auto'
-			})
-		} else {
-			$button.removeClass('active').css({
-				top: 'auto',
-				bottom: '55px'
-			})
+		if (windowWidth < 991) {
+			const stopPoint = footerTop - windowHeight + bottomOffset + 300
+			if (scrollTop > stopPoint) {
+				$button.addClass('active').css({
+					top: footerTop + 170 + 'px',
+					bottom: 'auto'
+				})
+			} else {
+				$button.removeClass('active').css({
+					top: 'auto',
+					bottom: '55px'
+				})
+			}
 		}
 	})
 })

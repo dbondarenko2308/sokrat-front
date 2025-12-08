@@ -46,10 +46,17 @@
   &__logo {
     display: flex;
     align-items: center;
+    height: 85px;
     margin-bottom: 30px;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
 
     @media only screen and (max-width: 991px) {
       margin-bottom: 20px;
+      height: 69px;
     }
   }
 

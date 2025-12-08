@@ -68,6 +68,24 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: 300ms;
+
+    svg {
+      path {
+        transition: 300ms;
+      }
+    }
+
+    &:hover {
+      background: $primary;
+
+
+      svg {
+        path {
+          stroke: #fff;
+        }
+      }
+    }
 
     &.swiper-button-disabled {
       pointer-events: none;
@@ -96,9 +114,9 @@
     padding-bottom: 102px;
 
     @media only screen and (max-width: 991px) {
-      height: 286px;
+      height: 300px;
       padding: 15px;
-      padding-bottom: 93px;
+      padding-bottom: 103px;
     }
 
     cursor: pointer;
@@ -158,7 +176,7 @@
 
     @media only screen and (max-width: 991px) {
       left: 15px;
-      bottom: 15px;
+      bottom: 30px;
     }
 
     p {

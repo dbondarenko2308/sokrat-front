@@ -75,6 +75,12 @@
 
       &:hover {
         color: $primary;
+
+        svg {
+          path {
+            stroke: $primary;
+          }
+        }
       }
     }
 
@@ -149,6 +155,12 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        padding: 5px;
+        border-radius: 5px;
+
+        &:hover {
+          background: $lgray;
+        }
 
         span {
           font-size: 13px;
@@ -240,6 +252,10 @@
       padding-right: 20px;
       margin-right: -20px;
 
+      @media only screen and (max-width: 991px) {
+        height: auto;
+      }
+
       &::-webkit-scrollbar {
         width: 10px;
         background: $lgray;
@@ -261,6 +277,14 @@
       font-weight: 600;
     }
 
+    &__aside {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      justify-content: space-between;
+    }
+
     &__item {
       display: flex;
       align-items: center;
@@ -268,11 +292,36 @@
       background: $lgray;
       border-radius: 20px;
       cursor: pointer;
-      max-height: 90px;
       transition: 300ms;
+      overflow: hidden;
+      position: relative;
+
+      @media only screen and (max-width: 991px) {
+        min-height: 70px;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        display: block;
+        bottom: -100%;
+        background: $lightprimary;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        border-radius: 20px;
+        transition: 400ms;
+      }
 
       &:hover {
-        background: $lightprimary;
+        &::before {
+          opacity: 1;
+          visibility: visible;
+          bottom: 0;
+        }
 
         .header-catalog__name {
           color: #fff;
@@ -306,11 +355,18 @@
       cursor: pointer;
       transition: 300ms;
 
+      &:hover {
+        span {
+          color: $lightprimary;
+        }
+      }
+
       span {
         font-size: 25px;
         font-weight: 700;
         display: block;
         margin-bottom: 20px;
+        transition: 300ms;
       }
     }
 
@@ -423,6 +479,7 @@
     &.border {
       input {
         border-radius: 10px 10px 0 0;
+        color: #000 ;
       }
     }
 
@@ -433,6 +490,7 @@
       width: 100%;
       margin-top: 0;
       display: none;
+      border-radius: 0 0 10px 10px;
 
       &__item {
         display: flex;
@@ -709,8 +767,9 @@
     font-weight: 600;
   }
 
-
   &-top__number {
-    color: $primary;
+    &:hover {
+      color: $primary;
+    }
   }
 }
