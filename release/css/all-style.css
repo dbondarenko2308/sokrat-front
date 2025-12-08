@@ -1291,6 +1291,91 @@ ul {
   color: #0060aa;
 }
 
+.sol-banner {
+  margin-bottom: 140px;
+}
+
+.sol-banner__inner {
+  padding: 50px;
+  color: #fff;
+  background: url("/images/sol-banner.png");
+  min-height: 700px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sol-banner__title {
+  margin-bottom: 30px;
+  max-width: 80%;
+}
+
+.sol-banner__desc {
+  max-width: 600px;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.sol-banner__text {
+  max-width: 500px;
+  color: #CAD3D9;
+}
+
+.sol-banner__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.sol-banner__list span {
+  padding: 10px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.sol-banner__list span:hover {
+  background: #fff;
+  color: #0060aa;
+}
+
+.sol-banner__btn {
+  gap: 10px;
+  max-width: 212px;
+  height: 54px;
+}
+
 .sk-banner {
   margin-top: 140px;
 }
@@ -1393,90 +1478,6 @@ ul {
   color: #202020;
 }
 
-.sol-banner {
-  margin-bottom: 140px;
-}
-
-.sol-banner__inner {
-  padding: 50px;
-  color: #fff;
-  background: url("/images/sol-banner.png");
-  min-height: 700px;
-  border-radius: 20px;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.sol-banner__title {
-  margin-bottom: 30px;
-}
-
-.sol-banner__desc {
-  max-width: 600px;
-  font-size: 25px;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-.sol-banner__text {
-  max-width: 500px;
-  color: #CAD3D9;
-}
-
-.sol-banner__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 50px;
-  gap: 20px;
-}
-
-.sol-banner__list span {
-  padding: 10px 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  -webkit-transition: 300ms;
-  transition: 300ms;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.sol-banner__list span:hover {
-  background: #fff;
-  color: #0060aa;
-}
-
-.sol-banner__btn {
-  gap: 10px;
-  max-width: 212px;
-  height: 54px;
-}
-
 .footer {
   width: 100%;
   -webkit-box-flex: 10;
@@ -1536,6 +1537,10 @@ ul {
 
 .footer .header__socials li a {
   color: #202020;
+}
+
+.footer .header__socials li a:hover {
+  background: #fff;
 }
 
 .footer__as {
@@ -1956,14 +1961,11 @@ ul {
   display: block;
   position: absolute;
   display: block;
-  bottom: -100%;
+  right: 15px;
   background: #0078bf;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-  border-radius: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
   -webkit-transition: 400ms;
   transition: 400ms;
 }
@@ -1971,7 +1973,9 @@ ul {
 .header-catalog__item:hover::before {
   opacity: 1;
   visibility: visible;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
+  right: 0;
 }
 
 .header-catalog__item:hover .header-catalog__name {
@@ -2749,36 +2753,6 @@ ul {
     font-size: 16px;
   }
 
-  .sk-banner {
-    margin-top: 80px;
-  }
-
-  .sk-banner__inner {
-    padding: 15px;
-    background: url("../images/sk-banner-first-mobile.png") 50% 50%;
-    background-size: cover;
-  }
-
-  .sk-banner__title {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-
-  .sk-banner__text {
-    margin-bottom: 30px;
-  }
-
-  .sk-banner__items {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-  }
-
-  .sk-banner-white {
-    margin-top: 30px;
-    margin-bottom: 80px;
-  }
-
   .sol-banner {
     margin-bottom: 80px;
   }
@@ -2812,6 +2786,36 @@ ul {
   .sol-banner__btn {
     max-width: 100%;
     height: 44px;
+  }
+
+  .sk-banner {
+    margin-top: 80px;
+  }
+
+  .sk-banner__inner {
+    padding: 15px;
+    background: url("../images/sk-banner-first-mobile.png") 50% 50%;
+    background-size: cover;
+  }
+
+  .sk-banner__title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .sk-banner__text {
+    margin-bottom: 30px;
+  }
+
+  .sk-banner__items {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .sk-banner-white {
+    margin-top: 30px;
+    margin-bottom: 80px;
   }
 
   .footer__top {

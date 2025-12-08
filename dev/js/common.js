@@ -291,7 +291,7 @@ $(document).ready(function() {
 			const stopPoint = footerTop - windowHeight + bottomOffset + 300
 			if (scrollTop > stopPoint) {
 				$button.addClass('active').css({
-					top: footerTop + 170 + 'px',
+					top: footerTop + 220 + 'px',
 					bottom: 'auto'
 				})
 			} else {

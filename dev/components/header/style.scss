@@ -305,14 +305,13 @@
         display: block;
         position: absolute;
         display: block;
-        bottom: -100%;
+        right: 15px;
         background: $lightprimary;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        opacity: 0;
-        visibility: hidden;
-        border-radius: 20px;
+        width: 44px;
+        height: 44px;
+        // opacity: 0;
+        // visibility: hidden;
+        border-radius: 10px;
         transition: 400ms;
       }
 
@@ -320,7 +319,9 @@
         &::before {
           opacity: 1;
           visibility: visible;
-          bottom: 0;
+          width: 100%;
+          height: 100%;
+          right: 0;
         }
 
         .header-catalog__name {
