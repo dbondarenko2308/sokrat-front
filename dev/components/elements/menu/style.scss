@@ -19,6 +19,13 @@
 
   &__item {
     position: relative;
+
+
+    a {
+      &:hover {
+        color: $primary;
+      }
+    }
     
     &.dropdown {
       position: relative;

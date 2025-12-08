@@ -6,6 +6,13 @@
 
   background: $lgray;
 
+
+  a {
+    &:hover {
+      color: $primary;
+    }
+  }
+
   &__top {
     padding-top: 100px;
 
@@ -59,6 +66,12 @@
 
   .header__socials {
     display: flex;
+
+    li {
+      a {
+        color: $black;
+      }
+    }
   }
 
   &__as {
@@ -68,6 +81,12 @@
     color: $primary;
     gap: 30px;
     margin-bottom: 58px;
+
+    a {
+      &:hover {
+        color: $lightprimary;
+      }
+    }
 
     @media only screen and (max-width: 991px) {
       margin-bottom: 30px;
