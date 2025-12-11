@@ -303,6 +303,168 @@ $(document).ready(function() {
 			}
 		}
 	})
+
+	if ($('.filter__price--slider').length) {
+		$('.filter__price--slider').each(function() {
+			let $range = $(this)
+			let parent = $(this).parent()
+			let $inputFrom = parent.find('.filter__price--low')
+			let $inputTo = parent.find('.filter__price--high')
+			let instance
+			let min = $inputFrom.data('min')
+			let max = $inputTo.data('max')
+			let from = $range.data('from')
+			let to = $range.data('to')
+
+			$range.ionRangeSlider({
+				skin: 'round',
+				type: 'double',
+				onStart: updateInputs,
+				onChange: updateInputs,
+				onFinish: updateInputsWT
+			})
+
+			instance = $range.data('ionRangeSlider')
+
+			function updateInputs(data) {
+				from = data.from
+				to = data.to
+
+				if (data.from === data.min || data.from === '') {
+					$inputFrom.prop('value', '')
+					$inputFrom.prop('placeholder', data.min)
+				} else {
+					$inputFrom.prop('value', from)
+					$inputFrom.prop('placeholder', '')
+				}
+
+				if (data.to === data.max || data.to === '') {
+					$inputTo.prop('value', '')
+					$inputTo.prop('placeholder', data.max)
+				} else {
+					$inputTo.prop('value', to)
+					$inputTo.prop('placeholder', '')
+				}
+			}
+
+			function updateInputsWT(data) {
+				from = data.from
+				to = data.to
+
+				if (data.from === data.min || data.from === '') {
+					$inputFrom.prop('value', '')
+					$inputFrom.prop('placeholder', data.min)
+				} else {
+					$inputFrom.prop('value', from)
+					$inputFrom.prop('placeholder', '')
+				}
+
+				if (data.to === data.max || data.to === '') {
+					$inputTo.prop('value', '')
+					$inputTo.prop('placeholder', data.max)
+				} else {
+					$inputTo.prop('value', to)
+					$inputTo.prop('placeholder', '')
+				}
+
+				$inputFrom.trigger('keyup')
+				$inputTo.trigger('keyup')
+			}
+
+			$inputFrom.on('change', function() {
+				var val = $(this).prop('value')
+				if (val < min) {
+					val = min
+				} else if (val > to) {
+					val = to
+				}
+
+				instance.update({
+					from: val
+				})
+				$(this).prop('value', val)
+			})
+
+			$inputTo.on('change', function() {
+				var val = $(this).prop('value')
+				if (val < from) {
+					val = from
+				} else if (val > max) {
+					val = max
+				}
+				instance.update({
+					to: val
+				})
+
+				$(this).prop('value', val)
+			})
+		})
+	}
+
+	$('.filter__top').on('click', function() {
+		$(this).toggleClass('active')
+		$(this).next('.filter__body').toggleClass('active')
+	})
+
+	$('.filter__mobile').on('click', function() {
+		$('.filter').addClass('active')
+	})
+
+	$('.filter__head--close').on('click', function() {
+		$('.filter').removeClass('active')
+	})
+
+	$('.listing__hit a').on('click', function() {
+		$(this).addClass('active')
+		$(this).next().addClass('active')
+	})
+
+	$('.listing__hit--close').on('click', function() {
+		$(this).removeClass('active')
+		$(this).prev().removeClass('active')
+	})
+
+	$('.card__srav').on('click', function() {
+		$(this).toggleClass('active')
+	})
+
+	$('.card__like').on('click', function() {
+		$(this).toggleClass('active')
+
+		return false
+	})
+
+	$('.card-popup__like').on('click', function() {
+		$(this).toggleClass('active')
+
+		return false
+	})
+
+	$('.card-popup__srav').on('click', function() {
+		$(this).toggleClass('active')
+
+		return false
+	})
+
+	$('.listing__sort--info').on('click', function() {
+		$('.listing__sort--dropdown').toggleClass('active')
+	})
+
+	$('.listing__sort--item').on('click', function() {
+		$('.listing__sort--dropdown').removeClass('active')
+	})
+
+	$('[data-card-popup-tab]').on('click', function() {
+		if (!$(this).hasClass('active')) {
+			var index = $(this).index()
+			$(this).addClass('active').siblings().removeClass('active')
+			$('[data-card-popup-item]')
+				.removeClass('active')
+				.eq(index)
+				.addClass('active')
+		}
+		return false
+	})
 })
 
 

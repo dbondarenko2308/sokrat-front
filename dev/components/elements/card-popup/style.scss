@@ -1,0 +1,380 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.card-popup {
+  display: none;
+  max-width: 1180px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 50px;
+  background: $lgray;
+
+  @media only screen and (max-width: 991px) {
+    padding: 15px;
+  }
+
+  &__close {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    justify-content: center;
+
+    @media only screen and (max-width: 991px) {
+      height: 178px;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: 991px) {
+      padding: 15px;
+      min-height: inherit;
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    color: $Darkestgray;
+    text-overflow: ellipsis;
+  }
+
+  &__foot {
+    flex-grow: 10;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 991px) {
+      margin-top: 20px;
+    }
+  }
+
+  &__price {
+    font-size: 25px;
+    color: $primary;
+    font-weight: 700;
+    padding-bottom: 5px;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 22px;
+    }
+  }
+
+  &__aside {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__basket {
+    width: 218px;
+
+
+    @media only screen and (max-width: 991px) {
+      width: 63px;
+      flex-shrink: 0;
+
+      height: 40px;
+
+    }
+
+    svg {
+      display: none;
+
+      @media only screen and (max-width: 991px) {
+        display: block;
+      }
+    }
+
+    span {
+      @media only screen and (max-width: 991px) {
+        display: none;
+      }
+    }
+  }
+
+  &__like,
+  &__srav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: $lgray;
+    border-radius: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    &.active {
+      background: $primary;
+
+      svg {
+        path {
+          stroke: #fff;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 991px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__contet {
+    margin-top: 50px;
+
+    @media only screen and (max-width: 991px) {
+      margin-top: 30px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      gap: 10px;
+    }
+
+    span {
+      padding: 10px 25px;
+      background: #fff;
+      border-radius: 10px;
+      cursor: pointer;
+
+      @media only screen and (max-width: 991px) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &.active {
+        background: $primary;
+        color: #fff;
+      }
+    }
+  }
+
+  &__item {
+    display: none;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+
+    @media only screen and (max-width: 991px) {
+      padding: 15px;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .card__grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    position: relative;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 14px;
+      gap: 48px;
+      align-items: flex-start;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      border-bottom: 1px dashed $gray;
+      width: 100%;
+      height: 1px;
+      bottom: 5px;
+
+      @media only screen and (max-width: 991px) {
+        bottom: auto;
+        top: 12px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    span {
+      background: #fff;
+      padding-right: 5px;
+      position: relative;
+      z-index: 1;
+    }
+
+    p {
+      padding-left: 5px;
+      background: #fff;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.card-char {
+  > span {
+    margin-bottom: 20px;
+    font-size: 25px;
+    display: block;
+    font-weight: 700;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.card-doc {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  &__item {
+    height: 214px;
+    max-width: 340px;
+    background: $lgray;
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    position: relative;
+
+    @media only screen and (max-width: 991px) {
+      max-width: 100%;
+      height: 136px;
+      padding: 15px;
+    }
+
+    &:hover {
+      &::before {
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .card-doc__name {
+        color: #fff;
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      background: $primary;
+      border-radius: 20px;
+      width: 54px;
+      height: 54px;
+
+      transition: 300ms;
+
+      @media only screen and (max-width: 991px) {
+        width: 40px;
+        height: 40px;
+        top: 15px;
+        right: 15px;
+      }
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: $primary;
+    width: 54px;
+    height: 54px;
+    border-radius: 10px;
+    margin-left: auto;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+
+    @media only screen and (max-width: 991px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}

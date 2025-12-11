@@ -1,0 +1,102 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.pagination {
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    gap: 5px;
+  }
+
+
+  &__item,
+  &__dots {
+    width: 54px;
+    height: 54px;
+    border-radius: 10px;
+    border: 1px solid $gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 991px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__item {
+    &.current {
+      border: 1px solid $primary;
+      color: $primary;
+    }
+
+
+    &:hover {
+      border: 1px solid $primary;
+      color: $primary;
+    }
+  }
+
+
+  &__btn {
+    width: 54px;
+    height: 54px;
+    background: $lgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+
+    @media only screen and (max-width: 991px) {
+      width: 40px;
+      height: 40px;
+    }
+
+    &:hover {
+      background: $primary;
+
+
+      svg {
+        path {
+          stroke: #fff;
+        }
+      }
+    }
+
+
+
+    &.hide {
+      pointer-events: none;
+      svg {
+        path {
+          stroke: $gray;
+        }
+      }
+    }
+
+    &.prev {
+      transform: rotate(180deg);
+    }
+  }
+
+
+  &__more {
+    width: 193px;
+    height: 52px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+}

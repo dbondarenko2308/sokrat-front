@@ -224,8 +224,10 @@ ul {
 }
 
 .checkbox.disabled {
-  pointer-events: none;
-  text-decoration: line-through;
+ 
+  .checkbox__text {
+    opacity: 0.2;
+  }
 }
 
 .checkbox__text {
@@ -653,5 +655,19 @@ ul {
 
   &.show {
     display: flex;
+  }
+}
+
+
+
+h1.title {
+  font-size: 52px;
+  color: $primary;
+  font-weight: 700;
+  margin-bottom: 50px;
+
+  @media only screen and (max-width: 991px) {
+    font-size: 32px;
+    margin-bottom: 30px;
   }
 }

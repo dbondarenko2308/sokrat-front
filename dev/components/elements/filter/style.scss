@@ -1,0 +1,244 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.filter {
+  @media only screen and (max-width: 991px) {
+    position: fixed;
+    right: 0;
+    background: #fff;
+    width: 100%;
+    height: calc(100vh - 128px);
+    overflow: auto;
+    z-index: 100;
+    top: 0;
+    padding: 25px 15px;
+
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__item {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $gray;
+
+    &:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+
+  &__list {
+    li {
+      margin-bottom: 20px;
+
+      a {
+        &.active {
+          color: $primary;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &.active {
+      .filter__arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 700;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 18px;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    transition: 400ms;
+  }
+
+  &__body {
+    display: none;
+    margin-top: 20px;
+    height: 100%;
+    max-height: 340px;
+
+    overflow-y: auto;
+    padding-right: 12px;
+
+    &::-webkit-scrollbar {
+      width: 9px;
+      background: #fff;
+      border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #cad3d9;
+      width: 9px;
+      border-radius: 5px;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__head {
+    display: none;
+
+    @media only screen and (max-width: 991px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 33px;
+      font-size: 22px;
+      font-weight: 700;
+
+      &--close {
+        display: flex;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        background: $lgray;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &__range--bottom {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    input {
+      background: #fff;
+      height: 42px;
+      padding: 10px 15px;
+      width: 100%;
+      font-size: 16px;
+      color: #202020;
+      border: 0;
+      border-radius: 10px;
+      font-family: inherit;
+      @media only screen and (max-width: 991px) {
+        background: $lgray;
+      }
+    }
+  }
+
+  .irs--round .irs-handle {
+    background: $primary;
+    border: 2px solid #fff;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    top: 27px;
+  }
+
+  .irs--round .irs-from,
+  .irs--round .irs-to,
+  .irs--round .irs-single {
+    display: none;
+  }
+
+  .irs--round .irs-line {
+    border-radius: 10px;
+  }
+
+  .irs--round .irs-bar {
+    background: $primary;
+  }
+
+  .irs--round .irs-min,
+  .irs--round .irs-max {
+    display: none;
+  }
+
+  .irs--round {
+    top: -24px;
+  }
+
+  &__btn {
+    display: none;
+
+    @media only screen and (max-width: 991px) {
+      display: flex;
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-family: inherit;
+    }
+  }
+
+  &__cancel {
+    color: $Darkestgray;
+    font-family: inherit;
+    transition: 300ms;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    background: #fff;
+
+    @media only screen and (max-width: 991px) {
+      font-weight: 400;
+      background: none;
+    }
+  }
+
+  &__btns {
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid $gray;
+
+    @media only screen and (max-width: 991px) {
+      position: fixed;
+      bottom: 0;
+      width: calc(100% - 30px);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      background: #fff;
+    }
+  }
+
+  .checkbox {
+    margin-bottom: 15px;
+    align-items: center;
+
+   
+    &__inner {
+      >span {
+        background: $lgray;
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
