@@ -7,7 +7,6 @@
     margin-bottom: 80px;
   }
 
-
   &__top {
     display: flex;
     align-items: center;
@@ -63,16 +62,14 @@
       }
     }
 
-
-
-    >span {
+    > span {
       font-size: 25px;
-      font-weight: 700;
+      font-weight: 600;
       margin-bottom: 20px;
       display: block;
 
       @media only screen and (max-width: 991px) {
-        font-size: 18px; 
+        font-size: 18px;
       }
     }
   }
@@ -87,13 +84,12 @@
       margin-top: 20px;
     }
 
-    >span {
+    > span {
       font-size: 25px;
-      font-weight: 700;
+      font-weight: 600;
       color: $primary;
       padding-bottom: 5px;
     }
-
   }
 
   &__btn {
@@ -114,7 +110,6 @@
         display: block;
       }
     }
-    
 
     .card__name {
       margin-bottom: 0;
@@ -132,6 +127,8 @@
       flex-grow: 0;
     }
 
-    
+    .card {
+      cursor: pointer;
+    }
   }
 }

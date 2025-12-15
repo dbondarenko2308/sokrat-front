@@ -208,7 +208,7 @@ ul {
 
 .title {
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 600;
 
   @media only screen and (max-width: 991px) {
     font-size: 30px;
@@ -379,7 +379,7 @@ ul {
 
   &__title {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 20px;
 
     @media only screen and (max-width: 991px) {
@@ -656,7 +656,7 @@ ul {
 h1.title {
   font-size: 52px;
   color: $primary;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 50px;
 
   @media only screen and (max-width: 991px) {
@@ -685,7 +685,7 @@ h1.title {
 
   &:hover {
     background: $primary;
-
+ 
     svg {
       path {
         stroke: #fff;

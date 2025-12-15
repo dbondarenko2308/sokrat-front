@@ -8,6 +8,13 @@
   flex-direction: column;
   align-items: flex-start;
 
+
+  &:hover {
+    .card__name {
+      color: $primary;
+    }
+  }
+
   &__labels {
     display: flex;
     position: absolute;
@@ -59,6 +66,8 @@
     height: 180px;
     justify-content: center;
 
+   
+
     @media only screen and (max-width: 991px) {
       height: 174px;
     }
@@ -71,10 +80,14 @@
 
   &__name {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     width: 100%;
     margin-bottom: 20px;
     flex-grow: 10;
+
+    &:hover {
+      color: $primary;
+    }
 
     @media only screen and (max-width: 991px) {
       font-size: 18px;
@@ -116,6 +129,17 @@
     align-items: center;
     gap: 5px;
 
+    &:hover {
+      color: $primary;
+
+
+      svg {
+        path {
+          stroke: $primary;
+        }
+      }
+    }
+
     @media only screen and (max-width: 991px) {
       font-size: 14px;
     }
@@ -128,7 +152,7 @@
   }
 
   &__price {
-    font-weight: 700;
+    font-weight: 600;
     color: $primary;
     font-size: 20px;
 
@@ -244,59 +268,55 @@
         height: 174px;
       }
     }
-
-   
   }
-
-  
 }
 
 .card {
-   &__grid {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 15px;
+  &__grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
 
-      position: relative;
+    position: relative;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 14px;
+      gap: 48px;
+      align-items: flex-start;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      border-bottom: 1px dashed $gray;
+      width: 100%;
+      height: 1px;
+      bottom: 5px;
 
       @media only screen and (max-width: 991px) {
-        font-size: 14px;
-        gap: 48px;
-        align-items: flex-start;
-      }
-
-      &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        border-bottom: 1px dashed $gray;
-        width: 100%;
-        height: 1px;
-        bottom: 5px;
-
-        @media only screen and (max-width: 991px) {
-         bottom: auto;
-         top: 12px;
-        }
-      }
-
-      &:last-child { 
-        margin-bottom: 0;
-      }
-
-      span {
-        background: #fff;
-        padding-right: 5px;
-        position: relative;
-        z-index: 1;
-      }
-
-      p {
-        padding-left: 5px;
-        background: #fff;
-        position: relative;
-        z-index: 1;
+        bottom: auto;
+        top: 12px;
       }
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    span {
+      background: #fff;
+      padding-right: 5px;
+      position: relative;
+      z-index: 1;
+    }
+
+    p {
+      padding-left: 5px;
+      background: #fff;
+      position: relative;
+      z-index: 1;
+    }
+  }
 }

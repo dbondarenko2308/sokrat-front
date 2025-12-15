@@ -26,7 +26,6 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
 
-
     @media only screen and (max-width: 991px) {
       grid-template-columns: 1fr;
     }
@@ -40,6 +39,7 @@
 
     @media only screen and (max-width: 991px) {
       height: 178px;
+      margin: 54px 0;
     }
 
     img {
@@ -64,7 +64,7 @@
 
   &__name {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 20px;
 
     @media only screen and (max-width: 991px) {
@@ -101,7 +101,7 @@
   &__price {
     font-size: 25px;
     color: $primary;
-    font-weight: 700;
+    font-weight: 600;
     padding-bottom: 5px;
 
     @media only screen and (max-width: 991px) {
@@ -118,13 +118,11 @@
   &__basket {
     width: 218px;
 
-
     @media only screen and (max-width: 991px) {
       width: 63px;
       flex-shrink: 0;
 
       height: 40px;
-
     }
 
     svg {
@@ -174,7 +172,7 @@
     margin-top: 50px;
 
     @media only screen and (max-width: 991px) {
-      margin-top: 30px;
+      margin-top: 20px;
     }
   }
 
@@ -196,6 +194,10 @@
       background: #fff;
       border-radius: 10px;
       cursor: pointer;
+
+      &:hover {
+        color: $primary;
+      }
 
       @media only screen and (max-width: 991px) {
         width: 100%;
@@ -280,7 +282,7 @@
     margin-bottom: 20px;
     font-size: 25px;
     display: block;
-    font-weight: 700;
+    font-weight: 600;
 
     @media only screen and (max-width: 991px) {
       font-size: 18px;
@@ -306,7 +308,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
     position: relative;
 
     @media only screen and (max-width: 991px) {
@@ -329,7 +331,6 @@
         z-index: 1;
       }
     }
-
 
     &:before {
       content: '';
@@ -375,6 +376,6 @@
 
   &__name {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
   }
 }

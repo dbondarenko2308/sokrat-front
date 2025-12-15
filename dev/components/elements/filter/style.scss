@@ -38,6 +38,11 @@
       a {
         &.active {
           color: $primary;
+          font-weight: 600; 
+        }
+
+        &:hover {
+          color: $primary ;
         }
       }
 
@@ -62,7 +67,7 @@
 
   &__name {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
 
     @media only screen and (max-width: 991px) {
       font-size: 18px;
@@ -88,6 +93,10 @@
       width: 9px;
       background: #fff;
       border-radius: 5px;
+
+      @media only screen and (max-width: 991px) {
+        background: $lgray;
+      }
     }
 
     &::-webkit-scrollbar-thumb {
@@ -110,7 +119,7 @@
       justify-content: space-between;
       margin-bottom: 33px;
       font-size: 22px;
-      font-weight: 700;
+      font-weight: 600;
 
       &--close {
         display: flex;
@@ -219,6 +228,7 @@
       transform: translateX(-50%);
       z-index: 10;
       background: #fff;
+      border-top: 0;
     }
   }
 
@@ -229,7 +239,11 @@
    
     &__inner {
       >span {
-        background: $lgray;
+        background: #fff;
+
+        @media only screen and (max-width: 991px) {
+          background: $lgray;
+        }
       }
     }
 
