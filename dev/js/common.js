@@ -407,12 +407,11 @@ $(document).ready(function() {
 
 	$('.filter__mobile').on('click', function() {
 		$('.filter').addClass('active')
-		$('body').addClass('hidden')
+		
 	})
 
 	$('.filter__head--close').on('click', function() {
 		$('.filter').removeClass('active')
-		$('body').removeClass('hidden')
 	})
 
 	$('.listing__hit a').on('click', function() {
