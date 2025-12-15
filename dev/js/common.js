@@ -464,4 +464,104 @@ $(document).ready(function() {
 		}
 		return false
 	})
+
+	var sliderThumbnail = new Swiper('.detal__container', {
+		slidesPerView: 7,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		spaceBetween: 5
+	})
+
+	var slider = new Swiper('.detal__top', {
+		thumbs: {
+			swiper: sliderThumbnail
+		},
+
+		pagination: {
+			clickable: true,
+			el: '.swiper-pagination'
+		}
+	})
+
+	$('[data-detal-nav]').on('click', function() {
+		if (!$(this).hasClass('active')) {
+			var index = $(this).index()
+			$(this).addClass('active').siblings().removeClass('active')
+			$('[data-detal-item]').removeClass('active').eq(index).addClass('active')
+		}
+		return false
+	})
+
+	const $activeTab = $('.detal-tabs__top [data-detal-nav].active')
+
+	if ($activeTab.length) {
+		$('.detal-tabs__mobile span').text($activeTab.text())
+	}
+
+	$('.detal-tabs__mobile').on('click', function() {
+		$('.detal-tabs__top').toggleClass('active')
+		$(this).toggleClass('active')
+	})
+
+	$('[data-detal-nav]').on('click', function() {
+		$('[data-detal-nav]').removeClass('active')
+		$(this).addClass('active')
+
+		$('.detal-tabs__mobile span').text($(this).text())
+
+		$('.detal-tabs__top').removeClass('active')
+		$('.detal-tabs__mobile').removeClass('active')
+	})
+
+	const prodcom = new Swiper('.prod-com__slider', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+
+		navigation: {
+			prevEl: '.prod-com__prev.btn-swiper-prev',
+			nextEl: '.prod-com__next.btn-swiper-next'
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		},
+		breakpoints: {
+			991: {
+				slidesPerView: 2
+			},
+			1200: {
+				slidesPerView: 3
+			}
+		}
+	})
+
+	$('.prod-rec').each(function() {
+		const $block = $(this)
+
+		new Swiper($block.find('.prod-rec__slider')[0], {
+			slidesPerView: 1,
+			spaceBetween: 20,
+
+			navigation: {
+				prevEl: $block.find('.prod-rec__prev.btn-swiper-prev')[0],
+				nextEl: $block.find('.prod-rec__next.btn-swiper-next')[0]
+			},
+
+			pagination: {
+				el: $block.find('.swiper-pagination')[0],
+				type: 'bullets',
+				clickable: true
+			},
+
+			breakpoints: {
+				991: {
+					slidesPerView: 2
+				},
+				1400: {
+					slidesPerView: 4
+				}
+			}
+		})
+	})
 })
