@@ -1,0 +1,109 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.vac-work {
+
+  margin-bottom: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+
+
+  &__title {
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 20px;
+    }
+  }
+
+
+  &__text {
+    max-width: 700px;
+    margin-bottom: 50px;
+
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media only screen and (max-width: 991px) {
+      right: -50px;
+      height: 197px;
+      
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+
+  &__item {
+    position: relative;
+
+    background: $lgray;
+
+    padding: 30px;
+    border-radius: 20px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 991px) {
+      padding: 15px;
+      min-height: 250px;
+      overflow: hidden;
+    }
+
+
+    &.blue {
+      color: #fff;
+      background: $primary;
+    }
+
+
+    &.wide {
+      grid-column: span 2;
+
+      @media only screen and (max-width: 991px) {
+        grid-column: span 1;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    max-width: 350px;
+
+    @media only screen and (max-width: 991px) {
+      max-width: 250px;
+    }
+  }
+}

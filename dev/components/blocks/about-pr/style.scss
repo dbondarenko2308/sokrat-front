@@ -1,0 +1,118 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.about-pr {
+  margin-bottom: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+
+
+  &__inner {
+    background: $primary;
+
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 50px;
+    color: #fff;
+
+    @media only screen and (max-width: 991px) {
+      padding: 15px;
+      padding-bottom: 89px;
+      position: relative;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 30px;
+      height: 33px;
+      justify-content: flex-start;
+
+      svg {
+        width: 145px;
+        height: 100%;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 100%;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 30px;
+    }
+  }
+
+
+  &__foot {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+
+    }
+  }
+
+  &__btn {
+    width: 212px;
+    gap: 7px;
+
+    @media only screen and (max-width: 991px) {
+      position: absolute;
+      bottom: 15px;
+      z-index: 1;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 30px);
+    }
+  }
+
+  &__left {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 530px;
+
+    >span {
+      color: $lgray;
+    }
+  }
+
+  &__right {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    color: #202020;
+    min-height: 256px;
+    
+    @media only screen and (max-width: 991px) {
+      min-height: inherit;
+      padding: 15px;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 20px;
+
+
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 1;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 22px;
+      }
+    }
+  }
+}

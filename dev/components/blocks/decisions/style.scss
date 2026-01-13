@@ -1,0 +1,112 @@
+
+@use '../../../style/scss/variables.scss' as *;
+
+.decis {
+  margin-bottom: 140px;
+
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+
+
+
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+
+  &__item {
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid $gray;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    cursor: pointer;
+
+    @media only screen and (max-width: 991px) {
+      padding: 15px;
+    }
+
+
+    &:hover {
+      &::before {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background: $lgray;
+      width: 160px;
+      height: 160px;
+      border-radius: 20px;
+      top: 30px;
+      left: 30px;
+      transition: 300ms;
+
+      @media only screen and (max-width: 991px) {
+        width: 120px;
+        height: 120px;
+        top: 15px;
+        left: 15px;
+      }
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    margin-bottom: 60px;
+    background: $lgray;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @media only screen and (max-width: 991px) {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__info {
+    max-width: 500px;
+    flex-grow: 10;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__name {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 18px;
+    }
+  }
+}

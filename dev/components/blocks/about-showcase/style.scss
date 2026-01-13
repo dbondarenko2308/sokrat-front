@@ -1,0 +1,66 @@
+
+
+.about-showcase {
+  margin-bottom: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+
+  
+
+  &__inner {
+    background: url('/images/about-showcase.png') 50% 50% no-repeat;
+    height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+
+
+    @media only screen and (max-width: 991px) {
+      height: 590px;
+    }
+  }
+
+
+
+
+  &__info {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    background: #fff;
+    max-width: 1010px;
+    border-radius: 20px;
+    padding: 30px;
+
+
+    @media only screen and (max-width: 991px) {
+      max-width: calc(100% - 30px);
+      left: 15px;
+      bottom: 15px;
+     
+      padding: 15px;
+    }
+
+
+    p {
+      display: block;
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 20px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 26px;
+       line-height: 100%;
+
+      }
+    }
+
+    span {
+      max-width: 650px;
+      display: block;
+    }
+  }
+}

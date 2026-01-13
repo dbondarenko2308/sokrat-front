@@ -1,0 +1,130 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.about-history {
+  margin-bottom: 140px;
+  overflow: hidden;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__container {
+    width: 700px;
+    overflow: visible;
+
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+      padding-bottom: 40px;
+    }
+    .swiper-pagination {
+      display: none;
+
+      @media only screen and (max-width: 991px) {
+        display: block;
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__item {
+    width: 160px;
+    background: $lgray;
+    padding: 30px;
+    height: 400px;
+    flex-shrink: 0;
+    will-change: transform;
+    transition: width 0.5s;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @media only screen and (max-width: 991px) {
+      height: 100%;
+      min-height: 400px;
+      padding: 15px;
+      transition: 0;
+      width: 100%;
+    }
+
+    &.swiper-slide-active {
+      background: $primary;
+      color: #fff;
+      width: 700px;
+
+      @media only screen and (max-width: 991px) {
+        width: 100%;
+      }
+
+      .about-history__year {
+        color: $lgray;
+      }
+      .about-history__card {
+        background: transparent;
+        width: 100%;
+      }
+
+      .about-history__text {
+        display: block;
+      }
+    }
+  }
+
+  &__text {
+    display: none;
+    font-size: 20px;
+
+    color: $lgray;
+  }
+
+  &__year {
+    font-size: 25px;
+    font-weight: 600;
+    color: $primary;
+    margin-bottom: 20px;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 22px;
+    }
+  }
+
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 55%;
+    left: -70px;
+
+    @media only screen and (max-width: 1300px) {
+      display: none;
+    }
+  }
+
+  &__prev {
+    transform: rotate(180deg);
+  }
+
+  &__next {
+    left: auto;
+    right: -70px;
+  }
+}

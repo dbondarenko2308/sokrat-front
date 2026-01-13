@@ -1,0 +1,76 @@
+@use '../../../style/scss/variables.scss' as *;
+.favorites {
+  margin-bottom: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    @media only screen and (max-width: 1400px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media only screen and (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.favorites-empty {
+  margin-top: 200px;
+  margin-bottom: 200px;
+
+  @media only screen and (max-width: 991px) {
+    margin-top: 140px;
+    margin-bottom: 200px;
+  }
+
+  &__inner {
+    text-align: center;
+
+    > span {
+      font-size: 52px;
+      display: block;
+      margin-bottom: 20px;
+      font-weight: 700;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 32px;
+      }
+    }
+
+    p {
+      font-size: 20px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 18px;
+      }
+
+
+
+      a {
+        color: $primary;
+      }
+    }
+
+    .btn {
+      width: 170px;
+      height: 54px;
+      margin: 0 auto;
+      margin-top: 20px;
+
+      @media only screen and (max-width: 991px) {
+        width: 151px;
+      }
+    }
+  }
+}

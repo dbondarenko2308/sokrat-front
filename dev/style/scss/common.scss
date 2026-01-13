@@ -685,7 +685,7 @@ h1.title {
 
   &:hover {
     background: $primary;
- 
+
     svg {
       path {
         stroke: #fff;
@@ -710,4 +710,73 @@ h1.title {
 
 .swiper-button-lock {
   display: none;
+}
+
+// Page-content
+
+.page-content {
+  margin-bottom: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: $primary;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 22px;
+      margin-top: 30px;
+    }
+  }
+  
+
+  b {
+    font-weight: 600;
+  }
+
+  ul {
+    margin-bottom: 50px;
+
+    @media only screen and (max-width: 991px) {
+      margin-top: 30px;
+    }
+
+    li {
+      padding-left: 30px;
+      position: relative;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+        background: $primary;
+        left: 0;
+        top: 6px;
+
+      
+      }
+    }
+  }
 }

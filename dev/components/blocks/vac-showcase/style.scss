@@ -1,0 +1,56 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.vac-showcase {
+  margin-bottom: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+
+  &__label {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 20px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 15px;
+      line-height: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    line-height: 100%;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    max-width: 940px;
+    margin-bottom: 50px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @media only screen and (max-width: 991px) {
+      height: 490px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.vac-info {
+  margin-bottom: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid $gray;
+
+    @media only screen and (max-width: 991px) {
+      align-items: flex-start;
+      padding: 15px;
+      gap: 20px;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      background: $gray;
+      border-radius: 20px;
+    }
+  }
+
+  &__content {
+    span {
+      font-size: 25px;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 10px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 22px;
+      }
+    }
+
+    p {
+      color: $primary;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      font-weight: 600;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 14px;
+      }
+
+      b {
+        position: relative;
+        font-weight: 600;
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: $primary;
+          border-radius: 50%;
+          width: 5px;
+          height: 5px;
+          left: -20px;
+        }
+      }
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    width: 54px;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: $primary;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    @media only screen and (max-width: 991px) {
+      width: 40px;
+      height: 40px;
+
+    }
+  }
+}

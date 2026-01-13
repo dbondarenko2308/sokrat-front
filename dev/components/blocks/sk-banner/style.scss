@@ -7,6 +7,38 @@
     margin-top: 80px;
   }
 
+  &-dec {
+    margin-bottom: 140px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 80px;
+    }
+
+    .sk-banner__inner {
+       background: url('../../../images/sk-banner-dec.png') 50% 50%;
+
+
+       @media only screen and (max-width: 991px) {
+         background: url('../../../images/sk-banner-dec-mobile.png') 50% 50%;
+         background-size: cover;;
+       }
+    }
+
+    .sk-banner__item span {
+      text-transform: uppercase;
+
+      @media only screen and (max-width: 991px) {
+        br {
+          display: none;
+        }
+      }
+    }
+
+    .sk-banner__item p {
+      color: $gray;
+    }
+  }
+
   &__inner {
     background: url('../../../images/sk-banner-first.png') 50% 50%;
     padding: 50px;

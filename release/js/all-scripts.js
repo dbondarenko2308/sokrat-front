@@ -408,7 +408,6 @@ $(document).ready(function() {
 
 	$('.filter__mobile').on('click', function() {
 		$('.filter').addClass('active')
-		
 	})
 
 	$('.filter__head--close').on('click', function() {
@@ -564,6 +563,129 @@ $(document).ready(function() {
 					slidesPerView: 4
 				}
 			}
+		})
+	})
+
+	$('[data-search-tab]').on('click', function() {
+		if (!$(this).hasClass('active')) {
+			var index = $(this).index()
+			$(this).addClass('active').siblings().removeClass('active')
+			$('[data-search-item]').removeClass('active').eq(index).addClass('active')
+		}
+		return false
+	})
+
+	const aboutHistory = new Swiper('.about-history__container', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+
+		navigation: {
+			prevEl: '.about-history__prev.btn-swiper-prev',
+			nextEl: '.about-history__next.btn-swiper-next'
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		},
+
+		loop: true,
+
+		breakpoints: {
+			991: {
+				slidesPerView: 'auto'
+			}
+		},
+		on: {
+			slideChangeTransitionEnd: function() {
+				const activeSlide = this.slides[this.activeIndex]
+				this.slides.forEach(slide => slide.classList.remove('is-active'))
+				if (activeSlide) activeSlide.classList.add('is-active')
+			}
+		}
+	})
+
+	const aboutNews = new Swiper('.about-news__container', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+
+		navigation: {
+			prevEl: '.about-news__prev.btn-swiper-prev',
+			nextEl: '.about-news__next.btn-swiper-next'
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		},
+
+		breakpoints: {
+			991: {
+				slidesPerView: 2
+			}
+		}
+	})
+
+	$('.garant__head').on('click', function() {
+		$(this).toggleClass('active')
+		$(this).next().toggleClass('active')
+	})
+
+	$('.garant__more').on('click', function() {
+		const btn = $(this)
+		const text = btn.prev('.garant__text')
+
+		text.toggleClass('is-open')
+		btn.toggleClass('is-open')
+
+		btn
+			.find('span')
+			.text(text.hasClass('is-open') ? 'Свернуть' : 'Показать весь текст')
+	})
+
+	const decSlider = new Swiper('.dec-slider__content', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		},
+
+		breakpoints: {
+			991: {
+				slidesPerView: 4
+			}
+		}
+	})
+
+	$('.field-file input[type="file"]').on('change', function() {
+		const $field = $(this).closest('.field-file')
+		const $info = $field.find('.field-file__info')
+
+		if (!this.files.length) return
+
+		$field.find('.field-file__selected').remove()
+
+		const fileName = this.files[0].name
+
+		const $fileBlock = $(`
+    <div class="field-file__selected">
+      <span class="field-file__name">${fileName}</span>
+      <span class="field-file__remove">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+  <path d="M12 12L4 4M12 4L4 12" stroke="#525558" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</span>
+    </div>
+  `)
+
+		$info.after($fileBlock)
+
+		$fileBlock.find('.field-file__remove').on('click', () => {
+			this.value = ''
+			$fileBlock.remove()
 		})
 	})
 })

@@ -1,0 +1,134 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.pr-showcase {
+  margin-bottom: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+  &__inner {
+    padding: 50px;
+    background: $lgray;
+    border-radius: 20px;
+
+    @media only screen and (max-width: 991px) {
+      padding: 15px;
+    }
+  }
+
+  &__label {
+    font-size: 16px;
+    color: $primary;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    line-height: 100%;
+    margin-bottom: 50px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @media only screen and (max-width: 991px) {
+      height: 250px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__aside {
+    width: 100%;
+    max-width: 580px;
+    > span {
+      font-size: 20px;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 30px;
+
+
+    @media only screen and (max-width: 991px) {
+      display: block;
+      margin-top: 20px;
+    }
+
+    .card-doc__item {
+      background: #fff;
+      max-height: 134px;
+      padding: 20px;
+
+      @media only screen and (max-width: 991px) {
+        margin-top: 30px;
+        max-height: 113px;
+      }
+
+      &:hover {
+        &::before {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          right: 0;
+        }
+      }
+
+      &::before {
+        width: 40px;
+        height: 40px;
+        top: 20px;
+        right: 20px;
+      }
+    }
+
+    .card-doc__arrow {
+      width: 40px;
+      height: 40px;
+    }
+
+    .card-doc__name {
+      @media only screen and (max-width: 991px) {
+        font-size: 18px;
+      }
+    }
+
+    .card__grid {
+      span {
+        background: $lgray;
+      }
+
+      p {
+        background: $lgray;
+
+        @media only screen and (max-width: 991px) {
+          text-align: right;
+          max-width: 160px;
+        }
+      }
+    }
+  }
+}

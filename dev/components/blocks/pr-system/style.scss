@@ -1,0 +1,61 @@
+@use '../../../style/scss/variables.scss' as *;
+
+
+.pr-system {
+  margin-bottom: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+
+
+  &__title {
+    margin-bottom: 50px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+
+    @media only screen and (max-width: 991px) {
+      grid-gap: 15px;
+    }
+
+    ul {
+      li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          left: 0;
+          border-radius: 2px;
+          background: $primary;
+          top: 6px;
+
+
+        }
+      }
+    }
+
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

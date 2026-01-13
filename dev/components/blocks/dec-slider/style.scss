@@ -1,0 +1,28 @@
+.dec-slider {
+  margin-bottom: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+  &__title {
+    margin-bottom: 50px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+  }
+
+
+  &__content {
+    @media only screen and (max-width: 991px) {
+      padding-bottom: 40px;
+    }
+
+
+    .card-doc__item {
+      @media only screen and (max-width: 991px) {
+        min-height: 154px;
+      }
+    }
+  }
+}
