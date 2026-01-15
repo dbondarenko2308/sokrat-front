@@ -688,6 +688,48 @@ $(document).ready(function() {
 			$fileBlock.remove()
 		})
 	})
+
+	$('.price-block__head ').on('click', function() {
+		$(this).toggleClass('active')
+		$(this).next().toggleClass('active')
+	})
+
+	$('.price-block__grid--mobile').on('click', function() {
+		$(this).toggleClass('active')
+		$(this).next().toggleClass('active')
+	})
+
+	var init2 = false
+	var swiper2
+	function swiperTable() {
+		if (window.innerWidth < 991) {
+			if (!init2) {
+				init2 = true
+				swiper2 = new Swiper('.price-table__container', {
+					slidesPerView: 1,
+					spaceBetween: 10,
+					loop: true,
+					pagination: {
+						el: '.swiper-pagination',
+						type: 'bullets',
+						clickable: true
+					},
+
+					breakpoints: {
+						992: {
+							slidesPerView: 3
+						}
+					}
+				})
+			}
+		} else if (init2) {
+			swiper2.destroy()
+			init2 = false
+		}
+	}
+
+	swiperTable()
+	window.addEventListener('resize', swiperTable)
 })
 
 
