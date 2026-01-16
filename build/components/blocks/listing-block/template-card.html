@@ -1,0 +1,267 @@
+<div class="listing">
+  <div class="container">
+    <div class="listing__inner">
+      <div class="listing__filter">
+        <div class="filter__mobile">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M10 18H21M3 18H6M6 20L6 16M20 12H21M3 12H16M16 14V10M14 6H21M3 6H10M10 8L10 4"
+              stroke="#202020"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Фильтры</span>
+        </div>
+        <div class="listing__rec">
+          <div class="listing__hit red">
+            <a href="#">
+              <span>Хиты продаж</span>
+            </a>
+            <div class="listing__hit--close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M15 15L5 5M15 5L5 15"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="listing__hit green">
+            <a href="#">
+              <span>Новинки</span>
+            </a>
+            <div class="listing__hit--close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M15 15L5 5M15 5L5 15"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="listing__hit yellow">
+            <a href="#">
+              <span>Рекомендуемое</span>
+            </a>
+            <div class="listing__hit--close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M15 15L5 5M15 5L5 15"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        @@include('../../elements/filter/template.html',{})
+      </div>
+
+      <div class="listing__content">
+        <div class="listing__top">
+          <div class="listing__sort">
+            <span>Сортировать:</span>
+
+            <div class="listing__sort--aside">
+              <div class="listing__sort--info">
+                <div class="listing__sort--container">
+                  <div class="listing__sort--head">
+                    <span>популярности</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="8"
+                      height="10"
+                      viewBox="0 0 8 10"
+                      fill="none"
+                    >
+                      <path
+                        d="M3.83464 8.8335L3.83464 0.500163M3.83464 0.500163L7.16797 3.8335M3.83464 0.500163L0.501302 3.8335"
+                        stroke="#202020"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="listing__sort--arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                  >
+                    <path
+                      d="M9 1L5 5L1 1"
+                      stroke="#202020"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="listing__sort--dropdown">
+                <div class="listing__sort--item active">
+                  <span>популярности</span>
+                </div>
+                <div class="listing__sort--item">
+                  <span>названию А-Я</span>
+                </div>
+                <div class="listing__sort--item">
+                  <span>названию Я-А</span>
+                </div>
+                <div class="listing__sort--item">
+                  <span>возрастанию цены</span>
+                </div>
+                <div class="listing__sort--item">
+                  <span>убыванию цены</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="listing__btns">
+            <div class="listing__btn active">
+              <span>Кратко</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M9 3H4C3.44771 3 3 3.44771 3 4V9C3 9.5523 3.44771 10 4 10H9C9.5523 10 10 9.5523 10 9V4C10 3.44771 9.5523 3 9 3Z"
+                  stroke="#202020"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9 14H4C3.44771 14 3 14.4477 3 15V20C3 20.5523 3.44771 21 4 21H9C9.5523 21 10 20.5523 10 20V15C10 14.4477 9.5523 14 9 14Z"
+                  stroke="#202020"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M20 3H15C14.4477 3 14 3.44771 14 4V9C14 9.5523 14.4477 10 15 10H20C20.5523 10 21 9.5523 21 9V4C21 3.44771 20.5523 3 20 3Z"
+                  stroke="#202020"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M20 14H15C14.4477 14 14 14.4477 14 15V20C14 20.5523 14.4477 21 15 21H20C20.5523 21 21 20.5523 21 20V15C21 14.4477 20.5523 14 20 14Z"
+                  stroke="#202020"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="listing__btn">
+              <span>Полно</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path d="M10 12H22" stroke="#202020" stroke-width="0.5" />
+                <path
+                  d="M10 12H22"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 19H22"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 5H22"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6 17H2V21H6V17Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6 10H2V14H6V10Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6 3H2V7H6V3Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="listing__grids">
+          @@include('../../elements/card/template-wide.html',{})
+          @@include('../../elements/card/template-wide.html',{})
+          @@include('../../elements/card/template-wide.html',{})
+          @@include('../../elements/card/template-wide.html',{})
+          @@include('../../elements/card/template-wide.html',{})
+          @@include('../../elements/card/template-wide.html',{})
+          @@include('../../elements/card/template-wide.html',{})
+          @@include('../../elements/card/template-wide.html',{})
+          @@include('../../elements/card/template-wide.html',{})
+          @@include('../../elements/card/template-wide.html',{})
+          @@include('../../elements/card/template-wide.html',{})
+        </div>
+        @@include('../../elements/pagination/template.html',{})
+      </div>
+    </div>
+  </div>
+</div>

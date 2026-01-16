@@ -1,0 +1,28 @@
+.about-buro {
+  margin-bottom: 140px;
+}
+@media only screen and (max-width: 991px) {
+  .about-buro {
+    margin-bottom: 80px;
+  }
+}
+.about-buro__title {
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 991px) {
+  .about-buro__title {
+    margin-bottom: 30px;
+  }
+}
+.about-buro__text {
+  font-size: 25px;
+  font-weight: 600;
+  color: #0060aa;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 991px) {
+  .about-buro__text {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}

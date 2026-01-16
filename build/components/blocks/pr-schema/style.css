@@ -1,0 +1,26 @@
+.pr-schem {
+  margin-bottom: 140px;
+}
+@media only screen and (max-width: 991px) {
+  .pr-schem {
+    margin-bottom: 80px;
+  }
+}
+.pr-schem__title {
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 991px) {
+  .pr-schem__title {
+    margin-bottom: 30px;
+  }
+}
+.pr-schem__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #CAD3D9;
+  border-radius: 20px;
+}

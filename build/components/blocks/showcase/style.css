@@ -1,0 +1,200 @@
+.showcase {
+  margin-top: 50px;
+}
+@media only screen and (max-width: 991px) {
+  .showcase {
+    margin-top: 26px;
+  }
+}
+.showcase__item {
+  border-radius: 20px;
+  min-height: 600px;
+  position: relative;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media only screen and (max-width: 991px) {
+  .showcase__item {
+    padding: 15px;
+    padding-bottom: 36px;
+  }
+}
+.showcase__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.showcase__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (max-width: 991px) {
+  .showcase__img img {
+    display: none;
+  }
+}
+.showcase__img img.mobile {
+  display: none;
+}
+@media only screen and (max-width: 991px) {
+  .showcase__img img.mobile {
+    display: block;
+  }
+}
+.showcase__title {
+  font-size: 52px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  line-height: 100%;
+}
+@media only screen and (max-width: 991px) {
+  .showcase__title {
+    font-size: 32px;
+  }
+}
+.showcase__text {
+  max-width: 660px;
+}
+.showcase__info {
+  position: relative;
+  z-index: 1;
+  max-width: 770px;
+  color: #fff;
+}
+.showcase__btn {
+  position: relative;
+  z-index: 1;
+  max-width: 363px;
+  height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 991px) {
+  .showcase__btn {
+    height: 44px;
+    font-size: 14px;
+    max-width: 100%;
+  }
+}
+.showcase__grids {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 991px) {
+  .showcase__grids {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
+.showcase__grid {
+  padding: 30px;
+  border-radius: 20px;
+  background: #F5F6F8;
+}
+@media only screen and (max-width: 991px) {
+  .showcase__grid {
+    padding: 15px;
+  }
+}
+.showcase__grid > span {
+  font-size: 25px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 991px) {
+  .showcase__grid > span {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+.showcase__grid > p a {
+  color: #0060aa;
+  display: inline;
+}
+.showcase__aside {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+@media only screen and (max-width: 1300px) {
+  .showcase__aside {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
+.showcase__aside--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.showcase__aside--img {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  mix-blend-mode: darken;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media only screen and (max-width: 991px) {
+  .showcase__aside--img {
+    width: 81px;
+  }
+}
+.showcase__aside--info p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 100%;
+  margin-bottom: 5px;
+}
+@media only screen and (max-width: 991px) {
+  .showcase__aside--info p {
+    font-size: 16px;
+  }
+}
+.showcase__aside--info span a {
+  color: #0060aa;
+}

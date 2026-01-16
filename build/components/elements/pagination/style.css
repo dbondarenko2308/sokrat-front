@@ -1,0 +1,101 @@
+.pagination__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.pagination__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 10px;
+  gap: 5px;
+}
+.pagination__item, .pagination__dots {
+  width: 54px;
+  height: 54px;
+  border-radius: 10px;
+  border: 1px solid #CAD3D9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media only screen and (max-width: 991px) {
+  .pagination__item, .pagination__dots {
+    width: 40px;
+    height: 40px;
+  }
+}
+.pagination__item.current {
+  border: 1px solid #0060aa;
+  color: #0060aa;
+}
+.pagination__item:hover {
+  border: 1px solid #0060aa;
+  color: #0060aa;
+}
+.pagination__btn {
+  width: 54px;
+  height: 54px;
+  background: #F5F6F8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 991px) {
+  .pagination__btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+.pagination__btn:hover {
+  background: #0060aa;
+}
+.pagination__btn:hover svg path {
+  stroke: #fff;
+}
+.pagination__btn.hide {
+  pointer-events: none;
+}
+.pagination__btn.hide svg path {
+  stroke: #CAD3D9;
+}
+.pagination__btn.prev {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.pagination__more {
+  width: 193px;
+  height: 52px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .pagination__more {
+    width: 100%;
+    height: 40px;
+  }
+}

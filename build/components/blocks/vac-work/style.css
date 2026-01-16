@@ -1,0 +1,116 @@
+.vac-work {
+  margin-bottom: 140px;
+}
+@media only screen and (max-width: 991px) {
+  .vac-work {
+    margin-bottom: 80px;
+  }
+}
+.vac-work__title {
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 991px) {
+  .vac-work__title {
+    margin-bottom: 20px;
+  }
+}
+.vac-work__text {
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 991px) {
+  .vac-work__text {
+    margin-bottom: 30px;
+  }
+}
+.vac-work__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+@media only screen and (max-width: 991px) {
+  .vac-work__items {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+.vac-work__img {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+@media only screen and (max-width: 991px) {
+  .vac-work__img {
+    right: -50px;
+    height: 197px;
+  }
+  .vac-work__img svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+.vac-work__item {
+  position: relative;
+  background: #F5F6F8;
+  padding: 30px;
+  border-radius: 20px;
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media only screen and (max-width: 991px) {
+  .vac-work__item {
+    padding: 15px;
+    min-height: 250px;
+    overflow: hidden;
+  }
+}
+.vac-work__item.blue {
+  color: #fff;
+  background: #0060aa;
+}
+.vac-work__item.wide {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+@media only screen and (max-width: 991px) {
+  .vac-work__item.wide {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+  }
+}
+.vac-work__label {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.vac-work__desc {
+  max-width: 350px;
+}
+@media only screen and (max-width: 991px) {
+  .vac-work__desc {
+    max-width: 250px;
+  }
+}

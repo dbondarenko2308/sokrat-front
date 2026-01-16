@@ -1,0 +1,231 @@
+.pritok {
+  margin-bottom: 140px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 991px) {
+  .pritok {
+    margin-bottom: 80px;
+  }
+}
+.pritok__info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+@media only screen and (max-width: 991px) {
+  .pritok__info {
+    display: block;
+  }
+}
+.pritok__title {
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 991px) {
+  .pritok__title {
+    margin-bottom: 30px;
+  }
+}
+.pritok__content {
+  background: #0060aa;
+  border-radius: 20px;
+  color: #fff;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+}
+@media only screen and (max-width: 991px) {
+  .pritok__content {
+    padding: 15px;
+    gap: 30px;
+  }
+}
+.pritok__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 991px) {
+  .pritok__img {
+    display: none;
+  }
+}
+.pritok__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.pritok__btn {
+  gap: 15px;
+}
+.pritok__btn:hover {
+  border: 1px solid #fff;
+}
+.pritok__top {
+  max-width: 600px;
+}
+.pritok__top span {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 100%;
+  margin-bottom: 30px;
+  display: block;
+}
+@media only screen and (max-width: 991px) {
+  .pritok__top span {
+    margin-bottom: 20px;
+  }
+}
+.pritok__top p {
+  color: #CAD3D9;
+}
+.pritok__slider {
+  margin-top: 50px;
+}
+@media only screen and (max-width: 1500px) {
+  .pritok__slider {
+    padding-bottom: 40px;
+    margin-top: 30px;
+  }
+}
+.pritok__grids {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media only screen and (max-width: 1500px) {
+  .pritok__grids {
+    display: -webkit-box;
+  }
+}
+.pritok__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #CAD3D9;
+  background: #fff;
+  position: relative;
+  margin-left: -12px;
+  z-index: 1;
+  cursor: pointer;
+  -ms-flex-negative: initial;
+      flex-shrink: initial;
+}
+@media only screen and (max-width: 1500px) {
+  .pritok__grid {
+    width: 100%;
+    margin: 0;
+  }
+}
+.pritok__grid:first-child {
+  margin-left: 0 !important;
+}
+.pritok__grid.compressed {
+  margin-left: -37px;
+}
+@media only screen and (max-width: 1500px) {
+  .pritok__grid.compressed {
+    margin-left: 0;
+  }
+}
+.pritok__grid.expanded {
+  width: 367px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media only screen and (max-width: 1500px) {
+  .pritok__grid.expanded {
+    width: auto;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+.pritok__grid.expanded .pritok__text {
+  opacity: 1;
+  visibility: visible;
+  width: auto;
+  margin-left: 10px;
+  max-width: 200px;
+}
+@media only screen and (max-width: 1500px) {
+  .pritok__grid.expanded .pritok__text {
+    margin-left: 20px !important;
+  }
+}
+.pritok__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 130px;
+  height: 130px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: #F5F6F8;
+  border-radius: 20px;
+  overflow: hidden;
+  mix-blend-mode: darken;
+}
+@media only screen and (max-width: 1500px) {
+  .pritok__icon {
+    width: 100px;
+    height: 100px;
+  }
+}
+.pritok__icon img {
+  mix-blend-mode: darken;
+}
+.pritok__text {
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+@media only screen and (max-width: 1500px) {
+  .pritok__text {
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    margin-left: 20px;
+    -ms-flex-negative: initial;
+        flex-shrink: initial;
+  }
+}

@@ -1,0 +1,132 @@
+.about-history {
+  margin-bottom: 140px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 991px) {
+  .about-history {
+    margin-bottom: 80px;
+  }
+}
+.about-history__inner {
+  position: relative;
+}
+.about-history__slider {
+  overflow: hidden;
+}
+.about-history__title {
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 991px) {
+  .about-history__title {
+    margin-bottom: 30px;
+  }
+}
+.about-history__container {
+  width: 700px;
+  overflow: visible;
+}
+@media only screen and (max-width: 991px) {
+  .about-history__container {
+    width: 100%;
+    padding-bottom: 40px;
+  }
+}
+.about-history__container .swiper-pagination {
+  display: none;
+}
+@media only screen and (max-width: 991px) {
+  .about-history__container .swiper-pagination {
+    display: block;
+  }
+}
+.about-history__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+.about-history__item {
+  width: 160px;
+  background: #F5F6F8;
+  padding: 30px;
+  height: 400px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  will-change: transform;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  border-radius: 20px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 991px) {
+  .about-history__item {
+    height: 100%;
+    min-height: 400px;
+    padding: 15px;
+    -webkit-transition: 0;
+    transition: 0;
+    width: 100%;
+  }
+}
+.about-history__item.swiper-slide-active {
+  background: #0060aa;
+  color: #fff;
+  width: 700px;
+}
+@media only screen and (max-width: 991px) {
+  .about-history__item.swiper-slide-active {
+    width: 100%;
+  }
+}
+.about-history__item.swiper-slide-active .about-history__year {
+  color: #F5F6F8;
+}
+.about-history__item.swiper-slide-active .about-history__card {
+  background: transparent;
+  width: 100%;
+}
+.about-history__item.swiper-slide-active .about-history__text {
+  display: block;
+}
+.about-history__text {
+  display: none;
+  font-size: 20px;
+  color: #F5F6F8;
+}
+.about-history__year {
+  font-size: 25px;
+  font-weight: 600;
+  color: #0060aa;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 991px) {
+  .about-history__year {
+    font-size: 22px;
+  }
+}
+.about-history__prev, .about-history__next {
+  position: absolute;
+  top: 55%;
+  left: -70px;
+}
+@media only screen and (max-width: 1300px) {
+  .about-history__prev, .about-history__next {
+    display: none;
+  }
+}
+.about-history__prev {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.about-history__next {
+  left: auto;
+  right: -70px;
+}

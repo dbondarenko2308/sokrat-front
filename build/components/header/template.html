@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/favicon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon.png"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico" />
+
+    <link rel="stylesheet" href="libraries/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="libraries/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="libraries/rangeslider/ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="libraries/select2/select2.min.css" />
+    <link rel="stylesheet" href="libraries/inputTel/inputTel.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all-style.css" />
+    <title>@@title</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        <div class="header">
+          <div class="container">
+            <div class="header__inner">
+              <div class="header-top">
+                <div class="header-top__left">
+                  <div class="header-top__desc">Разработка и производство</div>
+                  <div class="header-top__icons">
+                    <img src="images/header-t-1.svg" alt="" />
+                    <img src="images/header-t-2.svg" alt="" />
+                  </div>
+                </div>
+
+                <div class="header-top__info">
+                  <div class="header-top__country">
+                    <div class="header-top__name">
+                      <span>Санкт-Петербург</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="11"
+                        height="7"
+                        viewBox="0 0 11 7"
+                        fill="none"
+                      >
+                        <path
+                          d="M9.33333 1L5.16667 5.16667L1 1"
+                          stroke="#202020"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+
+                    <div class="header-country"></div>
+                  </div>
+
+                  <div class="header-top__tech">Техподдержка</div>
+
+                  <a href="#" class="header-top__number">8 (800) 333-66-70</a>
+
+                  <a href="#modal" data-fancybox class="header-top__btn btn btn-blue"
+                    >Оставить заявку</a
+                  >
+                </div>
+              </div>
+
+              <div class="header__content">
+                <a href="#" class="header__logo">
+                  <img src="images/logo.svg" alt="" />
+                </a>
+
+                @@include('../elements/menu/template.html',{})
+              </div>
+
+              <div class="header__mob">
+                <a href="#" class="header__logo mobile">
+                  <img src="images/logo.svg" alt="" />
+                </a>
+
+                <div class="header__mob--info">
+                  <div class="header-top__country">
+                    <div class="header-top__name">
+                      <span>Санкт-Петербург</span>
+                    </div>
+
+                    <div class="header-country"></div>
+                  </div>
+
+                  <a href="#" class="header__mob--call">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M7.91912 3.54768C7.66602 2.91492 7.05317 2.5 6.37166 2.5H4.07895C3.20692 2.5 2.5 3.20695 2.5 4.07898C2.5 11.4912 8.50898 17.5 15.9212 17.5C16.7933 17.5 17.5 16.7931 17.5 15.9211L17.4999 13.6284C17.4999 12.9468 17.0849 12.3341 16.4522 12.0809L14.2559 11.2024C13.6876 10.975 13.0404 11.0775 12.5702 11.4694L12.0026 11.9423C11.3404 12.4941 10.3666 12.45 9.75712 11.8405L8.15947 10.2429C7.54994 9.63339 7.50602 8.65962 8.05786 7.9974L8.53068 7.42998C8.92258 6.95969 9.02502 6.31244 8.79766 5.74405L7.91912 3.54768Z"
+                        stroke="#202020"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="header__info">
+                <div class="header__burger">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.16602 14.1667H15.8327M4.16602 10H15.8327M4.16602 5.83334H15.8327"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span>Меню</span>
+                </div>
+
+                <ul class="header__socials">
+                  <li>
+                    <a href="#">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="28"
+                        height="28"
+                        viewBox="0 0 28 28"
+                        fill="none"
+                      >
+                        <path
+                          d="M23.2477 5.15179L4.30682 12.4573C3.01407 12.976 3.02174 13.697 4.07118 14.0186L8.7951 15.493L10.6026 21.0346C10.8223 21.6411 10.714 21.8817 11.3509 21.8817C11.8424 21.8817 12.0605 21.6576 12.3342 21.3901C12.5083 21.2198 13.5419 20.2149 14.6961 19.0928L19.6098 22.7233C20.514 23.2221 21.1669 22.9637 21.392 21.8835L24.6175 6.68368C24.9478 5.35971 24.1128 4.75916 23.2477 5.15179ZM9.53647 15.1542L20.1842 8.43651C20.7157 8.11415 21.2031 8.28747 20.803 8.64267L11.6857 16.8687L11.3307 20.655L9.53647 15.1542Z"
+                          fill="#0088CC"
+                        />
+                      </svg>
+                      <span>Telegram</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="22"
+                        viewBox="0 0 24 22"
+                        fill="none"
+                      >
+                        <g clip-path="url(#clip0_2001_913)">
+                          <path
+                            d="M12.6444 13.3032H3.76549V9.57645H12.6444C13.163 9.57645 13.5236 9.67233 13.7046 9.83978C13.8856 10.0072 13.9977 10.3178 13.9977 10.7715V12.1096C13.9977 12.5876 13.8856 12.8982 13.7046 13.0656C13.5236 13.2331 13.163 13.3046 12.6444 13.3046V13.3032ZM13.2535 6.06296H0V22.0003H3.76549V16.8152H10.7049L13.9977 22.0003H18.2143L14.5839 16.7909C15.9223 16.5805 16.5233 16.1454 17.019 15.4284C17.5147 14.7114 17.7632 13.5651 17.7632 12.0352V10.8401C17.7632 9.9328 17.6727 9.21578 17.5147 8.66623C17.3567 8.11666 17.0865 7.63865 16.703 7.20932C16.2978 6.80286 15.8467 6.51663 15.3051 6.32485C14.7635 6.1574 14.0868 6.06152 13.2535 6.06152V6.06296Z"
+                            fill="#100943"
+                          />
+                          <path
+                            d="M21.1077 6.06122C22.7054 6.06122 24.0006 4.70436 24.0006 3.03061C24.0006 1.35685 22.7054 0 21.1077 0C19.51 0 18.2148 1.35685 18.2148 3.03061C18.2148 4.70436 19.51 6.06122 21.1077 6.06122Z"
+                            fill="#ED143B"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_2001_913">
+                            <rect width="24" height="22" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <span>RuTube</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="28"
+                        height="28"
+                        viewBox="0 0 28 28"
+                        fill="none"
+                      >
+                        <path
+                          d="M21.6001 5H6.39987C3.4176 5 1 7.36527 1 10.283V17.717C1 20.6347 3.4176 23 6.39987 23H21.6001C24.5824 23 27 20.6347 27 17.717V10.283C27 7.36527 24.5824 5 21.6001 5ZM17.9482 14.3617L10.8386 17.6792C10.6491 17.7676 10.4303 17.6324 10.4303 17.4271V10.5848C10.4303 10.3766 10.6549 10.2416 10.8447 10.3357L17.9544 13.8606C18.1658 13.9653 18.1621 14.2619 17.9482 14.3617Z"
+                          fill="#F61C0D"
+                        />
+                      </svg>
+                      <span>YouTube</span>
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="header__catalog">
+                  <div class="header__catalog--top">
+                    <span>Каталог</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M16 10L12 14L8 10"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+
+                  <div class="header-catalog">
+
+                    <div class="container">
+                      <div class="header-catalog__inner">
+                        <div class="header-catalog__items">
+                      <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a>
+                       <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a>
+                       <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a>
+                       <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a>
+                       <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a>
+                       <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a>
+                       <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a>
+                       <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a>
+                       <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a>
+                       <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a>
+                       <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a>
+                       <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a>
+                       <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a>
+                       <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                    </div>
+
+                    <div class="header-catalog__conf">
+                      <span>Конфигуратор</span>
+                      <p>Текст про конфигуратор. Что-то типа соберите свое уникальное оборудование, которое будет закрывать ваши потребности в охране.</p>
+                      <div class="header-catalog__img">
+                        <img src="images/header-catalog.png" alt="">
+                      </div>
+                    </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="header-search">
+                  <form action="#">
+                    <div class="header-search__container">
+                      <input type="text" placeholder="Я ищу..." />
+                      <div class="header-search__clear">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M15 15L5 5M15 5L5 15" stroke="#525558" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                      </div>
+
+                      <button class="header-search__btn">
+                        <span>Искать</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M15.7071 14.2929C15.3166 13.9024 14.6834 13.9024 14.2929 14.2929C13.9024 14.6834 13.9024 15.3166 14.2929 15.7071L15 15L15.7071 14.2929ZM20.2929 21.7071C20.6834 22.0976 21.3166 22.0976 21.7071 21.7071C22.0976 21.3166 22.0976 20.6834 21.7071 20.2929L21 21L20.2929 21.7071ZM10 17V16C6.68629 16 4 13.3137 4 10H3H2C2 14.4183 5.58172 18 10 18V17ZM3 10H4C4 6.68629 6.68629 4 10 4V3V2C5.58172 2 2 5.58172 2 10H3ZM10 3V4C13.3137 4 16 6.68629 16 10H17H18C18 5.58172 14.4183 2 10 2V3ZM17 10H16C16 13.3137 13.3137 16 10 16V17V18C14.4183 18 18 14.4183 18 10H17ZM15 15L14.2929 15.7071L20.2929 21.7071L21 21L21.7071 20.2929L15.7071 14.2929L15 15Z"
+                            fill="#525558"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+
+
+                    <div class="header-search-content">
+                      <div class="header-search-content__item">
+                        <span>Приток-А-МРР-04</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M6.22183 17.8492L17.5355 6.53553M17.5355 6.53553L10.8573 6.1427M17.5355 6.53553L17.9284 13.2138" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <div class="header-search-content__item">
+                        <span>Приток-А-МРР-04</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M6.22183 17.8492L17.5355 6.53553M17.5355 6.53553L10.8573 6.1427M17.5355 6.53553L17.9284 13.2138" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <div class="header-search-content__item">
+                        <span>Приток-А-МРР-04</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M6.22183 17.8492L17.5355 6.53553M17.5355 6.53553L10.8573 6.1427M17.5355 6.53553L17.9284 13.2138" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <div class="header-search-content__item">
+                        <span>Приток-А-МРР-04</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M6.22183 17.8492L17.5355 6.53553M17.5355 6.53553L10.8573 6.1427M17.5355 6.53553L17.9284 13.2138" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="header__navigation">
+                  <a href="#" class="header__nav--srav">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M7 11L7 19M12 5L12 19M17 11L17 19"
+                        stroke="#202020"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#" class="header__nav--like"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 8.19444C10 3.5 3 4 3 10C3 16.0001 12 21 12 21C12 21 21 16.0001 21 10C21 4 14 3.5 12 8.19444Z"
+                        stroke="#202020"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+
+                    <div class="header__nav--number">
+                      99
+                    </div>
+                  </a>
+
+                  <a href="#" class="header__nav--basket"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M3 3H3.26835C3.74213 3 3.97922 3 4.17246 3.08548C4.34283 3.16084 4.48871 3.2823 4.59375 3.43616C4.71289 3.61066 4.75578 3.84366 4.8418 4.30957L7.00004 16L17.4195 16C17.8739 16 18.1016 16 18.2896 15.9198C18.4554 15.8491 18.5989 15.7348 18.7051 15.5891C18.8255 15.424 18.8763 15.2025 18.9785 14.7597L20.5477 7.95972C20.7022 7.29025 20.7796 6.95561 20.6946 6.69263C20.6201 6.46207 20.4639 6.26634 20.256 6.14192C20.0189 6 19.6758 6 18.9887 6H5.5M18 21C17.4477 21 17 20.5523 17 20C17 19.4477 17.4477 19 18 19C18.5523 19 19 19.4477 19 20C19 20.5523 18.5523 21 18 21ZM8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20C9 20.5523 8.55228 21 8 21Z"
+                        stroke="#202020"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#" class="header__nav--human"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M20 21C20 18.2386 16.4183 16 12 16C7.58172 16 4 18.2386 4 21M12 13C9.23858 13 7 10.7614 7 8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8C17 10.7614 14.7614 13 12 13Z"
+                        stroke="#202020"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="header-mobile">
+          <div class="header__catalog">
+                  <div class="header__catalog--top">
+                    <span>Каталог</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M16 10L12 14L8 10"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+
+                  <div class="header-catalog header-catalog-mobile">
+
+                    <div class="container">
+                      <div class="header-catalog__inner">
+                        <div class="header-catalog__items">
+                      
+                      
+                       <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a> <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a> <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a> <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a> <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a> <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a> <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a> <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a> <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a> <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a> <a href="#" class="header-catalog__item">
+                        <div class="header-catalog__aside">
+                          <div class="header-catalog__name">
+                          Клавиатуры, считыватели, пульты выносные для ППКОП и УОО
+                        </div>
+                        <div class="header-catalog__arrow"> 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+  <path d="M0.999169 12.7065L12.3129 1.39283M12.3129 1.39283L5.63465 0.999996M12.3129 1.39283L12.7057 8.07106" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        </div>
+                      </a>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                    </div>
+
+                    <div class="header-catalog__conf">
+                      <span>Конфигуратор</span>
+                      <p>Текст про конфигуратор. Что-то типа соберите свое уникальное оборудование, которое будет закрывать ваши потребности в охране.</p>
+                      <div class="header-catalog__img">
+                        <img src="images/header-catalog.png" alt="">
+                      </div>
+                    </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                @@include('../elements/menu/template.html',{})
+
+
+
+
+                <a href="#" class="header__pod">Техподдержка</a>
+
+<div class="header-mobile__foot">
+  <div class="header-top__left">
+                  <div class="header-top__desc">Разработка и производство</div>
+                  <div class="header-top__icons">
+                    <img src="images/header-t-1.svg" alt="" />
+                    <img src="images/header-t-2.svg" alt="" />
+                  </div>
+                </div>
+
+
+                <a href="#modal" data-fancybox class="header-mobile__btn btn btn-blue">Оставить заявку</a>
+</div>
+
+        </div>
+     

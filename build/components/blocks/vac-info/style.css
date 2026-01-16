@@ -1,0 +1,128 @@
+.vac-info {
+  margin-bottom: 140px;
+}
+@media only screen and (max-width: 991px) {
+  .vac-info {
+    margin-bottom: 80px;
+  }
+}
+.vac-info__title {
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 991px) {
+  .vac-info__title {
+    margin-bottom: 30px;
+  }
+}
+.vac-info__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px;
+  position: relative;
+}
+.vac-info__item:first-child::before {
+  display: none;
+}
+.vac-info__item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 0;
+  background: #CAD3D9;
+  left: 30px;
+  width: calc(100% - 60px);
+}
+@media only screen and (max-width: 991px) {
+  .vac-info__item {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 15px;
+    gap: 20px;
+  }
+}
+.vac-info__item:last-child {
+  border-bottom: 0;
+}
+.vac-info__item:hover {
+  background: #F5F6F8;
+  border-radius: 20px;
+}
+.vac-info__content span {
+  font-size: 25px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 991px) {
+  .vac-info__content span {
+    font-size: 22px;
+  }
+}
+.vac-info__content p {
+  color: #0060aa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+  font-weight: 600;
+}
+@media only screen and (max-width: 991px) {
+  .vac-info__content p {
+    font-size: 14px;
+  }
+}
+.vac-info__content p b {
+  position: relative;
+  font-weight: 600;
+}
+.vac-info__content p b:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #0060aa;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  left: -20px;
+}
+.vac-info__arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 54px;
+  height: 54px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  background: #0060aa;
+  cursor: pointer;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media only screen and (max-width: 991px) {
+  .vac-info__arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
