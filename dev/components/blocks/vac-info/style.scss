@@ -20,7 +20,30 @@
     align-items: center;
     justify-content: space-between;
     padding: 30px;
-    border-bottom: 1px solid $gray;
+
+    position: relative;
+
+    &:first-child {
+      &::before {
+        display: none;
+      }
+    }
+
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: 0;
+      background: $gray;
+      left: 30px;
+      width: calc(100% - 60px);
+
+
+
+    }
 
     @media only screen and (max-width: 991px) {
       align-items: flex-start;
@@ -33,7 +56,7 @@
     }
 
     &:hover {
-      background: $gray;
+      background: $lgray;
       border-radius: 20px;
     }
   }

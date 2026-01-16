@@ -10,10 +10,11 @@
     background: $lgray;
     padding: 30px;
     border-radius: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     @media only screen and (max-width: 991px) {
       padding: 15px;
+      margin-bottom: 20px;
     }
 
     &:last-child {
@@ -53,6 +54,7 @@
     background: #fff;
     transition: 300ms;
     transform: rotate(180deg);
+    flex-shrink: 0;
 
     @media only screen and (max-width: 991px) {
       width: 40px;
@@ -130,10 +132,10 @@
     border-radius: 10px;
     overflow: hidden;
     height: 226px;
-
+    
     @media only screen and (max-width: 991px) {
+      width: 100%;
       height: 381px;
-      max-width: 269px;
       margin: 0 auto;
     }
 
@@ -214,6 +216,16 @@
     gap: 10px;
     cursor: pointer;
     margin-top: 10px;
+
+    &:hover {
+      color: $primary;
+
+      svg {
+        path {
+          stroke: $primary;
+        }
+      }
+    }
 
     &.is-open {
       svg {

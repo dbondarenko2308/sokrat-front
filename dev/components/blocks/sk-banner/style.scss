@@ -24,6 +24,15 @@
        }
     }
 
+    .sk-banner__title {
+
+      br {
+        @media only screen and (max-width: 991px) {
+          display: none;
+        }
+      }
+    }
+
     .sk-banner__item span {
       text-transform: uppercase;
 

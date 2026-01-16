@@ -67,6 +67,10 @@
     width: 212px;
     gap: 7px;
 
+    &:hover {
+      border: 1px solid #fff;
+    }
+
     @media only screen and (max-width: 991px) {
       position: absolute;
       bottom: 15px;

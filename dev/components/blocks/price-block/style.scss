@@ -113,6 +113,7 @@
     transition: 300ms;
     cursor: pointer;
     flex-shrink: 0;
+    margin-left: 10px;
 
     @media only screen and (max-width: 991px) {
       width: 40px;
@@ -219,6 +220,10 @@
       a {
         color: $primary;
 
+        &:hover {
+          color: #0078bf;
+        }
+
         @media only screen and (max-width: 991px) {
           position: absolute;
           left: 0;
@@ -273,6 +278,10 @@
         font-weight: 600;
         font-size: 14px;
 
+        &:hover {
+          color: #0078bf;
+        }
+
         @media only screen and (max-width: 991px) {
           padding: 0;
           display: none;
@@ -313,8 +322,9 @@
       flex-direction: column;
 
       align-items: flex-start;
-      gap: 20px;
+      gap: 10px;
       margin-top: 20px;
+      padding: 15px;
     }
     &--name {
       font-size: 20px;
@@ -330,6 +340,7 @@
       @media only screen and (max-width: 991px) {
         flex-direction: column;
         width: 100%;
+        gap: 10px;
       }
 
       a {
@@ -342,6 +353,9 @@
         color: $primary;
         font-weight: 600;
         transition: 300ms;
+        border: 1px solid #fff;
+
+       
 
         @media only screen and (max-width: 991px) {
           width: 100%;
@@ -358,12 +372,13 @@
         }
 
         &:hover {
-          background: #fff;
-          color: $primary;
+          border: 1px solid #fff;
+          background: $primary;
+          color: #fff;
 
           svg {
             path {
-              stroke: $primary;
+              stroke: #fff;
             }
           }
         }

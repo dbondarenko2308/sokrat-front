@@ -1,4 +1,4 @@
-
+@use '../../../style/scss/variables.scss' as *;
 
 .pr-schem {
   margin-bottom: 140px;
@@ -20,5 +20,7 @@
   &__img {
     display: flex;
     align-items: center;
+    border: 1px solid $gray;
+    border-radius: 20px;
   }
 }

@@ -108,6 +108,17 @@
     gap: 5px;
     cursor: pointer;
 
+     &:hover {
+      color: $primary;
+     
+
+      svg {
+        path {
+          stroke: $primary;
+        }
+      }
+    }
+
     &.active {
       color: $primary;
       .card__svg--active {
