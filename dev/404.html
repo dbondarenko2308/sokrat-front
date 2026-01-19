@@ -1,0 +1,36 @@
+@@include('components/header/template.html',{"title": 'Ошибка'})
+
+
+<div class="error">
+  <div class="container">
+    <div class="error__inner">
+
+
+      <div class="error__img">
+        <img src="images/error.png" alt="">
+
+      </div>
+
+      <div class="error__text">
+        Страница не найдена
+      </div>
+
+      <div class="error__desc">
+        Похоже, запрашиваемая страница отсутствует или была перемещена. Не переживайте — защита под контролем.
+      </div>
+
+
+      <a href="#" class="error__btn btn btn-blue">
+        <span>Вернуться на главную</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M7 12H17M17 12L13 8M17 12L13 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+      </a>
+    </div>
+  </div>
+</div>
+ 
+
+
+
+@@include('components/footer/template.html',{})

@@ -1,0 +1,97 @@
+.modal-login {
+  .feedback__title {
+    margin-bottom: 50px;
+
+    @media only screen and (max-width: 991px) {
+      max-width: 90% !important;
+      margin-bottom: 30px;
+    }
+  }
+
+  .field {
+    margin-bottom: 20px;
+  }
+
+  .feedback__btn {
+    height: 52px;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 20px;
+      height: 40px;
+    }
+  }
+
+
+  &__foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+
+    a {
+      color: #0060aa;
+    }
+  }
+
+  &__error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(170, 0, 0, 0.1);
+    color: #a00;
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 20px;
+    }
+
+    .checkbox {
+      margin: 0 !important;
+      flex-shrink: inherit;
+      align-items: center;
+
+      &__text {
+        font-size: 16px;
+
+        @media only screen and (max-width: 991px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &__pas {
+    color: #0060aa;
+    flex-shrink: 0;
+  }
+}
+
+
+.modal-password {
+  .field {
+    margin-bottom: 20px;
+  }
+
+  .feedback__btn {
+    height: 54px;
+  }
+
+  .feedback__title {
+    max-width: 100% !important;
+  }
+}

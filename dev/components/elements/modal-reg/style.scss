@@ -1,0 +1,101 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.modal-reg {
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  padding: 50px;
+
+  display: none;
+
+
+  @media only screen and (max-width: 767px) {
+    padding: 15px;
+  }
+
+
+  .feedback__title {
+    @media only screen and (max-width: 767px) {
+      max-width: 285px !important;
+    }
+  }
+
+  &.open {
+    display: block;
+  }
+
+  &.active {
+    .modal__close {
+      pointer-events: initial;
+      background: $primary;
+
+      svg {
+        path {
+          stroke: #fff;
+        }
+      }
+    }
+  }
+
+  .modal__close {
+    pointer-events: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 767px) {
+      right: 10px;
+      top: 10px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+
+    span {
+      color: $Darkestgray;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-weight: 600;
+      display: block;
+    }
+
+    a {
+      font-weight: 600;
+      color: $primary;
+      margin-top: 5px;
+      display: block;
+    }
+  }
+
+  &__items {
+    margin-bottom: 50px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .checkbox {
+    align-items: center;
+
+    @media only screen and (max-width: 991px) {
+      align-items: flex-start;
+    }
+  }
+
+  .checkbox__inner {
+    span {
+      background: $lgray;
+    }
+  }
+}

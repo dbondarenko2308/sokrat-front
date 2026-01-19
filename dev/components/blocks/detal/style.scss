@@ -123,9 +123,7 @@
     .card-popup__basket {
       width: 131px;
 
-      @media only screen and (max-width: 991px) {
-        width: 63px;
-      }
+     
     }
 
     &--quest {
@@ -133,10 +131,15 @@
       border: 1px solid $primary;
       font-weight: 600;
       color: $primary;
+      flex-shrink: 0;
 
       @media only screen and (max-width: 1200px) {
         width: 100%;
         grid-column: span 2;
+      }
+
+      @media only screen and (max-width: 991px) {
+        grid-column: span 1;
       }
     }
 
@@ -164,6 +167,19 @@
           display: grid;
           grid-template-columns: 1fr 1fr;
           grid-gap: 15px;
+        }
+
+        @media only screen and (max-width: 991px) {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .card-calc {
+        height: 44px;
+        width: 131px;
+
+        @media only screen and (max-width: 991px) {
+          height: 40px;
         }
       }
     }
@@ -405,4 +421,15 @@
       }
     }
   }
+
+
+  &__calc {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
 }
+
+
