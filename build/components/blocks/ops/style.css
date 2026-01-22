@@ -1,0 +1,28 @@
+.ops {
+  margin-bottom: 140px;
+}
+@media only screen and (max-width: 991px) {
+  .ops {
+    margin-bottom: 80px;
+  }
+}
+.ops__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px 50px;
+}
+@media only screen and (max-width: 991px) {
+  .ops__inner {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
+.ops__inner a {
+  color: #0060AA;
+}
+.ops__inner a:hover {
+  text-decoration: underline;
+}

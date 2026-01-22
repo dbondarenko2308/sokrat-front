@@ -287,6 +287,12 @@ ul {
   position: relative;
 }
 
+.field__name {
+  display: block;
+  color: #525558;
+  margin-bottom: 5px;
+}
+
 .field-password {
   position: absolute;
   right: 16px;
@@ -317,7 +323,8 @@ ul {
   justify-content: center;
 }
 
-.field input {
+.field input,
+.field textarea {
   width: 100%;
   height: 52px;
   border: 0;
@@ -329,24 +336,35 @@ ul {
   outline: none;
 }
 
-.field input:focus {
+.field input:focus,
+.field textarea:focus {
   border: 1px solid #0060aa;
 }
 
-.field input::-webkit-input-placeholder {
+.field input::-webkit-input-placeholder,
+.field textarea::-webkit-input-placeholder {
   color: #525558;
 }
 
-.field input:-moz-placeholder {
+.field input:-moz-placeholder,
+.field textarea:-moz-placeholder {
   color: #525558;
 }
 
-.field input::-moz-placeholder {
+.field input::-moz-placeholder,
+.field textarea::-moz-placeholder {
   color: #525558;
 }
 
-.field input:-ms-input-placeholder {
+.field input:-ms-input-placeholder,
+.field textarea:-ms-input-placeholder {
   color: #525558;
+}
+
+.field textarea {
+  resize: none;
+  min-height: 120px;
+  height: 100%;
 }
 
 .field-error input {
@@ -1760,12 +1778,17 @@ input:checked + .slider:before {
     font-size: 30px;
   }
 
+  .field__name {
+    font-size: 14px;
+  }
+
   .field-password {
     top: 12px;
     right: 6px;
   }
 
-  .field input {
+  .field input,
+  .field textarea {
     height: 42px;
   }
 

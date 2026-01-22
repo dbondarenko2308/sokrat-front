@@ -1,0 +1,193 @@
+.video {
+  margin-bottom: 140px;
+}
+@media only screen and (max-width: 991px) {
+  .video {
+    margin-bottom: 80px;
+  }
+}
+.video__inner {
+  position: relative;
+}
+.video__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px 20px;
+}
+@media only screen and (max-width: 991px) {
+  .video__items {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
+.video__video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 416px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 991px) {
+  .video__video {
+    height: 190px;
+  }
+}
+.video__video iframe {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.video__name {
+  font-weight: 600;
+}
+.video__mobile {
+  display: none;
+}
+@media only screen and (max-width: 991px) {
+  .video__mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 15px;
+    background: #F5F6F8;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  .video__mobile svg {
+    -webkit-transition: 300ms;
+    transition: 300ms;
+  }
+  .video__mobile.active svg {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+.video__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media only screen and (max-width: 991px) {
+  .video__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #F5F6F8;
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    top: 60px;
+    border-radius: 10px;
+    display: none;
+  }
+  .video__container.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.video__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media only screen and (max-width: 991px) {
+  .video__tabs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+}
+.video__tabs--item {
+  padding: 10px 25px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: #F5F6F8;
+}
+@media only screen and (max-width: 991px) {
+  .video__tabs--item {
+    width: 100%;
+    padding: 10px 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.video__tabs--item.active {
+  background: #0060aa;
+  color: #fff;
+}
+@media only screen and (max-width: 991px) {
+  .video__tabs--item.active {
+    background: #F5F6F8;
+    color: #202020;
+  }
+}
+.video__tabs--rutube {
+  padding: 10px 25px;
+  background: #F5F6F8;
+  border-radius: 10px;
+  cursor: pointer;
+  gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media only screen and (max-width: 991px) {
+  .video__tabs--rutube {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.video__tabs--rutube:hover {
+  color: #0060aa;
+}

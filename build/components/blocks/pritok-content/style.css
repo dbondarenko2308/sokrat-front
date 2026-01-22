@@ -1,0 +1,81 @@
+.pritok-content {
+  margin-bottom: 140px;
+}
+@media only screen and (max-width: 991px) {
+  .pritok-content {
+    margin-bottom: 80px;
+  }
+}
+.pritok-content .about-c__item {
+  background: #F5F6F8;
+}
+@media only screen and (max-width: 991px) {
+  .pritok-content .about-c__item {
+    height: 250px;
+  }
+}
+.pritok-content .about-c-partner .about-c__text {
+  max-width: 100%;
+}
+.pritok-content .about-c-regions {
+  background: url("../images/pritok-1.png") 50% 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media only screen and (max-width: 991px) {
+  .pritok-content .about-c-regions {
+    height: 250px;
+  }
+}
+.pritok-content .about-c-regions .about-c__name {
+  color: #fff;
+  max-width: 280px;
+}
+.pritok-content .about-c-regions .about-c__text {
+  color: #fff;
+  max-width: 280px;
+  margin-bottom: 0;
+}
+.pritok-content .about-c-info {
+  background: url("../images/pritok-2.png") 50% 50%;
+}
+.pritok-content .about-c-info .about-c__name {
+  color: #fff;
+  max-width: 280px;
+}
+.pritok-content .about-c-info .about-c__text {
+  color: #fff;
+  max-width: 280px;
+}
+.pritok-content .about-c__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.pritok-content .about-c__grid .about-c__text {
+  color: #fff;
+  margin-bottom: 0px;
+}
+.pritok-content .about-c__name {
+  position: relative;
+  z-index: 1;
+}
+.pritok-content .about-c__text {
+  position: relative;
+  z-index: 1;
+}

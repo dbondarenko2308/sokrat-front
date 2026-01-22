@@ -99,12 +99,7 @@
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  grid-gap: 30px;
-}
-@media only screen and (max-width: 991px) {
-  .garant__grids {
-    grid-gap: 20px;
-  }
+  grid-gap: 20px;
 }
 .garant__grid {
   display: -ms-grid;

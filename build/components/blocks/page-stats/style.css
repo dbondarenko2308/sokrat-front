@@ -1,0 +1,107 @@
+.page-stats {
+  margin-bottom: 140px;
+}
+@media only screen and (max-width: 991px) {
+  .page-stats {
+    margin-bottom: 80px;
+  }
+}
+.page-stats__items {
+  margin-bottom: 30px;
+}
+.page-stats__item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 310px 1fr;
+  grid-template-columns: 310px 1fr;
+  grid-gap: 50px;
+  padding: 30px;
+  border-radius: 20px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  cursor: pointer;
+}
+@media only screen and (max-width: 991px) {
+  .page-stats__item {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    padding: 15px;
+    grid-gap: 20px;
+  }
+}
+.page-stats__item:hover {
+  background: #F5F6F8;
+}
+.page-stats__item:hover .page-stats__top p {
+  color: #0060aa;
+}
+.page-stats__img {
+  width: 310px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: 225px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.page-stats__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (max-width: 991px) {
+  .page-stats__img {
+    width: 100%;
+    height: 217px;
+  }
+  .page-stats__img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.page-stats__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media only screen and (max-width: 991px) {
+  .page-stats__info {
+    gap: 20px;
+  }
+}
+.page-stats__top span {
+  color: #525558;
+  margin-bottom: 10px;
+  display: block;
+}
+@media only screen and (max-width: 991px) {
+  .page-stats__top span {
+    font-size: 14px;
+  }
+}
+.page-stats__top p {
+  font-size: 20px;
+  font-weight: 600;
+}
+@media only screen and (max-width: 991px) {
+  .page-stats__top p {
+    font-size: 18px;
+    color: #0060aa;
+  }
+}
+.page-stats__text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

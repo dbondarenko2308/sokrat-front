@@ -1,0 +1,32 @@
+.pritok-showcase {
+  margin-bottom: 140px;
+}
+@media only screen and (max-width: 991px) {
+  .pritok-showcase {
+    margin-bottom: 80px;
+  }
+}
+.pritok-showcase .sk-banner__inner {
+  background: url("../images/pritok-showcase.png") 50% 50%;
+  background-size: cover;
+  min-height: 600px;
+}
+@media only screen and (max-width: 991px) {
+  .pritok-showcase .sk-banner__inner {
+    background: url("../images/pritok-showcase-mobile.png") 50% 50%;
+    background-size: cover;
+    min-height: 590px;
+  }
+}
+.pritok-showcase .sk-banner__top {
+  max-width: 700px;
+}
+@media only screen and (max-width: 991px) {
+  .pritok-showcase .sk-banner__title {
+    line-height: 100%;
+  }
+}
+.pritok-showcase .sk-banner__text {
+  max-width: 650px;
+  margin-bottom: 0;
+}

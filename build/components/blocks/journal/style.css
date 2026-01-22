@@ -1,0 +1,13 @@
+.journal {
+  margin-bottom: 140px;
+}
+@media only screen and (max-width: 991px) {
+  .journal {
+    margin-bottom: 80px;
+  }
+}
+.journal__inner a {
+  margin-bottom: 20px;
+  display: block;
+  color: #0060aa;
+}

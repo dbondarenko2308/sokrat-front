@@ -1,0 +1,69 @@
+.choose-req {
+  margin-bottom: 140px;
+}
+@media only screen and (max-width: 991px) {
+  .choose-req {
+    margin-bottom: 80px;
+  }
+}
+.choose-req__info {
+  padding: 30px;
+  background: #F5F6F8;
+  border-radius: 20px;
+}
+@media only screen and (max-width: 991px) {
+  .choose-req__info {
+    padding: 15px;
+  }
+}
+.choose-req__info .checkbox {
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 991px) {
+  .choose-req__info .checkbox {
+    margin-bottom: 15px;
+  }
+}
+.choose-req__fields {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+@media only screen and (max-width: 991px) {
+  .choose-req__fields {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+.choose-req__fields .field {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+@media only screen and (max-width: 991px) {
+  .choose-req__fields .field {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+  }
+}
+.choose-req__fields .field:nth-child(2), .choose-req__fields .field:nth-child(3) {
+  -ms-grid-column-span: 1;
+  grid-column: span 1;
+}
+.choose-req__fields .field:last-child {
+  -ms-grid-column-span: 4;
+  grid-column: span 4;
+}
+@media only screen and (max-width: 991px) {
+  .choose-req__fields .field:last-child {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+  }
+}
+.choose-req__desc {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #525558;
+  margin-bottom: 20px;
+}

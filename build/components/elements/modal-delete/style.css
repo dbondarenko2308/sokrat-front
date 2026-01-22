@@ -1,0 +1,31 @@
+.modal-delete__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+@media only screen and (max-width: 991px) {
+  .modal-delete__btns {
+    gap: 10px;
+  }
+}
+.modal-delete .feedback__title {
+  max-width: 87% !important;
+}
+.modal-delete__cancel {
+  border: 1px solid #0060aa;
+  color: #0060aa;
+}
+.modal-delete__cancel:hover {
+  background: #0060aa;
+  color: #fff;
+}
+@media only screen and (max-width: 991px) {
+  .modal-delete .btn {
+    font-size: 14px;
+    height: 40px;
+  }
+}

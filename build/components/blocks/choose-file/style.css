@@ -1,0 +1,40 @@
+.choose-file {
+  margin-bottom: 140px;
+}
+@media only screen and (max-width: 991px) {
+  .choose-file {
+    margin-bottom: 80px;
+  }
+}
+.choose-file__title {
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 991px) {
+  .choose-file__title {
+    margin-bottom: 30px;
+  }
+}
+.choose-file__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.choose-file__items .card-doc__item {
+  width: 100%;
+  max-width: 100%;
+}
+@media only screen and (max-width: 1300px) {
+  .choose-file__items {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .choose-file__items {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
