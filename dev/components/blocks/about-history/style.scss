@@ -24,6 +24,17 @@
     }
   }
 
+  &__desc {
+    max-width: 700px;
+    margin-bottom: 50px;
+    margin-top: -20px;
+
+    @media only screen and (max-width: 991px) {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+  }
+
   &__container {
     width: 700px;
     overflow: visible;
@@ -126,5 +137,40 @@
   &__next {
     left: auto;
     right: -70px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__icon {
+    opacity: 0.1;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    @media only screen and (max-width: 991px) {
+      height: 55px;
+
+      left: 15px;
+      right: auto;
+      top: 57px;
+
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.about-pritok {
+  @media only screen and (max-width: 991px) {
+    .about-history__card {
+      height: 100%;
+      justify-content: space-between;
+      min-height: 520px;
+    }
   }
 }

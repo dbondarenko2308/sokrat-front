@@ -11,6 +11,16 @@
     padding: 15px;
   }
 }
+.card-popup .detal__calc {
+  width: 131px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media only screen and (max-width: 991px) {
+  .card-popup .detal__calc {
+    width: 121px;
+  }
+}
 .card-popup__close {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,6 +128,13 @@
 @media only screen and (max-width: 991px) {
   .card-popup__foot {
     margin-top: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 .card-popup__price {
@@ -125,6 +142,9 @@
   color: #0060aa;
   font-weight: 600;
   padding-bottom: 5px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 30px;
 }
 @media only screen and (max-width: 991px) {
   .card-popup__price {
@@ -139,13 +159,16 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+  width: 100%;
 }
 .card-popup__basket {
-  width: 218px;
+  width: 131px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 @media only screen and (max-width: 991px) {
   .card-popup__basket {
-    width: 63px;
+    width: 121px;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     height: 40px;
@@ -153,16 +176,6 @@
 }
 .card-popup__basket svg {
   display: none;
-}
-@media only screen and (max-width: 991px) {
-  .card-popup__basket svg {
-    display: block;
-  }
-}
-@media only screen and (max-width: 991px) {
-  .card-popup__basket span {
-    display: none;
-  }
 }
 .card-popup__like, .card-popup__srav {
   display: -webkit-box;
@@ -174,13 +187,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 44px;
+  width: 100%;
   height: 44px;
   background: #F5F6F8;
   border-radius: 10px;
   cursor: pointer;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
 }
 .card-popup__like.active, .card-popup__srav.active {
   background: #0060aa;
@@ -190,7 +201,7 @@
 }
 @media only screen and (max-width: 991px) {
   .card-popup__like, .card-popup__srav {
-    width: 40px;
+    width: 100%;
     height: 40px;
   }
 }

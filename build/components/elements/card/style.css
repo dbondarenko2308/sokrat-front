@@ -372,3 +372,53 @@
   position: relative;
   z-index: 1;
 }
+.card-calc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #CAD3D9;
+  border-radius: 10px;
+  padding: 6px;
+  gap: 6px;
+  height: 44px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 40px;
+}
+@media only screen and (max-width: 991px) {
+  .card-calc {
+    padding: 6px;
+  }
+}
+.card-calc input {
+  border: 0;
+  max-width: 32px;
+  text-align: center;
+  font-size: 16px;
+}
+.card-calc__plus, .card-calc__minus {
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #F5F6F8;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.card-calc__plus:hover, .card-calc__minus:hover {
+  background: #0060aa;
+}
+.card-calc__plus:hover svg path, .card-calc__minus:hover svg path {
+  stroke: #fff;
+}

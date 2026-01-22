@@ -1,0 +1,61 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.pritok-system {
+  margin-bottom: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 50px;
+
+    a {
+      color: $primary;
+      font-weight: 600;
+    }
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    @media only screen and (max-width: 1400px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media only screen and (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+
+    .catalog-s__text {
+      span {
+        font-size: 16px;
+        font-weight: 400;
+        display: block;
+        margin-top: 10px;
+      }
+    }
+
+    .catalog-s__icon {
+      mix-blend-mode: darken;
+    }
+  }
+}

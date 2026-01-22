@@ -1,0 +1,154 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.video {
+  margin-bottom: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px 20px;
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  &__video {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 416px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    @media only screen and (max-width: 991px) {
+      height: 190px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+  }
+
+  &__mobile {
+    display: none;
+
+    @media only screen and (max-width: 991px) {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      background: $lgray;
+      border-radius: 10px;
+      cursor: pointer;
+      justify-content: space-between;
+      margin-bottom: 30px;
+
+      svg {
+        transition: 300ms;
+      }
+
+      &.active {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+      background: $lgray;
+      padding: 20px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      z-index: 10;
+      top: 60px;
+      border-radius: 10px;
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    &--item {
+      padding: 10px 25px;
+      cursor: pointer;
+      border-radius: 10px;
+      background: $lgray;
+
+      @media only screen and (max-width: 991px) {
+        width: 100%;
+        padding: 10px 0;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+
+      &.active {
+        background: $primary;
+        color: #fff;
+
+        @media only screen and (max-width: 991px) {
+          background: $lgray;
+          color: $black;
+        }
+      }
+    }
+
+    &--rutube {
+      padding: 10px 25px;
+      background: $lgray;
+      border-radius: 10px;
+      cursor: pointer;
+      gap: 10px;
+      display: flex;
+      align-items: flex-start;
+
+      @media only screen and (max-width: 991px) {
+        justify-content: center;
+      }
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

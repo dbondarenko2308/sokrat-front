@@ -1,0 +1,35 @@
+@use '../../../style/scss/variables.scss' as *;
+.modal-delete {
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @media only screen and (max-width: 991px) {
+      gap: 10px;
+    }
+  }
+
+  .feedback {
+    &__title {
+      max-width: 87% !important;
+    }
+  }
+
+  &__cancel {
+    border: 1px solid $primary;
+    color: $primary;
+
+    &:hover {
+      background: $primary;
+      color: #fff;
+    }
+  }
+
+  .btn {
+    @media only screen and (max-width: 991px) {
+      font-size: 14px;
+      height: 40px;
+    }
+  }
+}

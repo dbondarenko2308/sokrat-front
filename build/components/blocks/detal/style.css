@@ -150,22 +150,25 @@
 .detal__aside .card-popup__basket {
   width: 131px;
 }
-@media only screen and (max-width: 991px) {
-  .detal__aside .card-popup__basket {
-    width: 63px;
-  }
-}
 .detal__aside--quest {
   width: 157px;
   border: 1px solid #0060aa;
   font-weight: 600;
   color: #0060aa;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 @media only screen and (max-width: 1200px) {
   .detal__aside--quest {
     width: 100%;
     -ms-grid-column-span: 2;
     grid-column: span 2;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .detal__aside--quest {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
   }
 }
 .detal__aside--foot {
@@ -197,6 +200,21 @@
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .detal__aside--foot .card-popup__foot {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+.detal__aside--foot .card-calc {
+  height: 44px;
+  width: 131px;
+}
+@media only screen and (max-width: 991px) {
+  .detal__aside--foot .card-calc {
+    height: 40px;
   }
 }
 .detal__aside--top {
@@ -438,4 +456,10 @@
     height: auto;
     gap: 30px;
   }
+}
+.detal__calc {
+  display: none;
+}
+.detal__calc.active {
+  display: block;
 }

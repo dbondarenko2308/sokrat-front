@@ -186,16 +186,6 @@
     gap: 30px;
   }
 }
-.catalog-s__item:last-child {
-  -ms-grid-column-span: 2;
-  grid-column: span 2;
-}
-@media only screen and (max-width: 991px) {
-  .catalog-s__item:last-child {
-    -ms-grid-column-span: 1;
-    grid-column: span 1;
-  }
-}
 .catalog-s__item:hover {
   border: 1px solid #F5F6F8;
 }

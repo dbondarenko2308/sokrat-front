@@ -915,4 +915,96 @@ $(document).ready(function() {
 			$input.val(val - 1)
 		}
 	})
+
+	$('.lk__mobile').on('click', function() {
+		$(this).toggleClass('active')
+		$(this).next().toggleClass('active')
+	})
+
+	$('.serial-input').on('input', function() {
+		let val = $(this).val().replace(/\D/g, '')
+
+		val = val.substring(0, 15)
+
+		let part1 = val.substring(0, 6)
+		let part2 = val.substring(6, 9)
+		let part3 = val.substring(9, 15)
+
+		let result = part1
+
+		if (part2) result += ' ' + part2
+		if (part3) result += ' ' + part3
+
+		$(this).val(result)
+	})
+
+	$('[data-order-tab]').on('click', function() {
+		if (!$(this).hasClass('active')) {
+			var index = $(this).index()
+			$(this).addClass('active').siblings().removeClass('active')
+			$('[data-order-item').removeClass('active').eq(index).addClass('active')
+		}
+		return false
+	})
+
+	$('[data-scroll-item]').on('click', function(e) {
+		e.preventDefault()
+
+		const index = $(this).index()
+		const text = $(this).text()
+		const $target = $('[data-scroll]').eq(index)
+
+		if ($target.length) {
+			$('html, body').animate(
+				{
+					scrollTop: $target.offset().top - 50
+				},
+				500
+			)
+		}
+
+		$('.software__select--name').text(text)
+
+		$('.software__top').toggleClass('active')
+		$('.software__select').removeClass('active')
+	})
+
+	$('.software__select').on('click', function() {
+		$(this).toggleClass('active')
+		$('.software__top').toggleClass('active')
+	})
+
+	$('[data-faq-item]').on('click', function() {
+		if (!$(this).hasClass('active')) {
+			var index = $(this).index()
+			$(this).addClass('active').siblings().removeClass('active')
+			$('[data-faq-content').removeClass('active').eq(index).addClass('active')
+		}
+		return false
+	})
+
+	$('.choose-faq__head').on('click', function() {
+		$(this).toggleClass('active')
+		$(this).next().toggleClass('active')
+	})
+
+	$('.video__tabs--item').on('click', function() {
+		$('.video__tabs--item').removeClass('active')
+		$(this).addClass('active')
+	})
+
+	$('.video__mobile').on('click', function() {
+		$(this).toggleClass('active')
+		$('.video__container').toggleClass('active')
+	})
+
+	$('.video__tabs--item').on('click', function() {
+		const text = $(this).find('span').text().trim()
+
+		$('.video__tabs--item').removeClass('active')
+		$(this).addClass('active')
+		$('.video__mobile span').text(text)
+		$('.video__mobile').removeClass('active')
+		$('.video__container').removeClass('active')
+	})
 })

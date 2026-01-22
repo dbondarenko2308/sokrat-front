@@ -1,0 +1,82 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.pritok-content {
+  margin-bottom: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+
+  .about-c {
+    &__item {
+      background: $lgray;
+
+      @media only screen and (max-width: 991px) {
+        height: 250px;
+      }
+    }
+
+    &-partner {
+      .about-c__text {
+        max-width: 100%;
+      }
+    }
+
+    &-regions {
+      background: url('/images/pritok-1.png') 50% 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @media only screen and (max-width: 991px) {
+        height: 250px;
+      }
+
+      .about-c__name {
+        color: #fff;
+        max-width: 280px;
+      }
+
+      .about-c__text {
+        color: #fff;
+        max-width: 280px;
+        margin-bottom: 0;
+      }
+    }
+
+    &-info {
+      background: url('/images/pritok-2.png') 50% 50%;
+
+      .about-c__name {
+        color: #fff;
+        max-width: 280px;
+      }
+
+      .about-c__text {
+        color: #fff;
+        max-width: 280px;
+      }
+    }
+
+    &__grid {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .about-c__text {
+        color: #fff;
+        margin-bottom: 0px;
+      }
+    }
+
+    &__name {
+      position: relative;
+      z-index: 1;
+    }
+
+    &__text {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}

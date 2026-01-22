@@ -1,0 +1,70 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.choose-req {
+  margin-bottom: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+
+
+  &__info {
+    padding: 30px;
+    background: $lgray;
+    border-radius: 20px;
+
+    @media only screen and (max-width: 991px) {
+      padding: 15px;
+    }
+
+    .checkbox {
+      margin-bottom: 20px;
+      
+      @media only screen and (max-width: 991px) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
+
+    .field {
+
+
+      grid-column: span 2;
+
+      @media only screen and (max-width: 991px) {
+        grid-column: span 1;
+      }
+
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        grid-column: span 1;
+      }
+
+
+      &:last-child {
+        grid-column: span 4;
+
+        @media only screen and (max-width: 991px) {
+          grid-column: span 1;
+        }
+      }
+    }
+  }
+
+  &__desc {
+    margin-top: 20px;
+    font-size: 14px;
+    color: $Darkestgray;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,105 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.page-stats {
+  margin-bottom: 140px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+  &__items {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 310px 1fr;
+    grid-gap: 50px;
+    padding: 30px;
+    border-radius: 20px;
+    transition: 300ms;
+    cursor: pointer;
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+      padding: 15px;
+      grid-gap: 20px;
+    }
+
+    &:hover {
+      background: $lgray;
+
+      .page-stats__top {
+        p {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 310px;
+    flex-shrink: 0;
+    height: 225px;
+    border-radius: 10px;
+    overflow: hidden;
+
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+      height: 217px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 991px) {
+      gap: 20px;
+    }
+  }
+
+  &__top {
+    span {
+      color: $Darkestgray;
+      margin-bottom: 10px;
+      display: block;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 14px;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: 600;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 18px;
+
+        color: $primary;
+      }
+    }
+  }
+
+  &__text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

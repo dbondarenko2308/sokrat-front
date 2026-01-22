@@ -1,0 +1,105 @@
+.modal-login .feedback__title {
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 991px) {
+  .modal-login .feedback__title {
+    max-width: 90% !important;
+    margin-bottom: 30px;
+  }
+}
+.modal-login .field {
+  margin-bottom: 20px;
+}
+.modal-login .feedback__btn {
+  height: 52px;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 991px) {
+  .modal-login .feedback__btn {
+    margin-bottom: 20px;
+    height: 40px;
+  }
+}
+.modal-login__foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+@media only screen and (max-width: 991px) {
+  .modal-login__foot {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5px;
+  }
+}
+.modal-login__foot a {
+  color: #0060aa;
+}
+.modal-login__error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(170, 0, 0, 0.1);
+  color: #a00;
+  margin-bottom: 30px;
+}
+.modal-login__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 991px) {
+  .modal-login__content {
+    margin-bottom: 20px;
+  }
+}
+.modal-login__content .checkbox {
+  margin: 0 !important;
+  -ms-flex-negative: inherit;
+      flex-shrink: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal-login__content .checkbox__text {
+  font-size: 16px;
+}
+@media only screen and (max-width: 991px) {
+  .modal-login__content .checkbox__text {
+    font-size: 14px;
+  }
+}
+.modal-login__pas {
+  color: #0060aa;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.modal-password .field {
+  margin-bottom: 20px;
+}
+.modal-password .feedback__btn {
+  height: 54px;
+}
+.modal-password .feedback__title {
+  max-width: 100% !important;
+}

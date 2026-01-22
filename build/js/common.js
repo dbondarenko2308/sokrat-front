@@ -21,13 +21,14 @@ $(document).ready(function() {
 		}
 	)
 
-	var init1 = false
-	var swiper1
 	function swiperHow() {
-		if (window.innerWidth < 1500) {
+		const $container = document.querySelector('.price-table__container')
+		if (!$container) return
+
+		if (window.innerWidth < 991) {
 			if (!init1) {
 				init1 = true
-				swiper1 = new Swiper('.pritok__slider', {
+				swiper1 = new Swiper($container, {
 					slidesPerView: 1,
 					spaceBetween: 10,
 					loop: true,
@@ -35,17 +36,11 @@ $(document).ready(function() {
 						el: '.swiper-pagination',
 						type: 'bullets',
 						clickable: true
-					},
-
-					breakpoints: {
-						992: {
-							slidesPerView: 3
-						}
 					}
 				})
 			}
-		} else if (init1) {
-			swiper1.destroy()
+		} else if (init1 && swiper1) {
+			swiper1.destroy(true, true)
 			init1 = false
 		}
 	}
@@ -699,22 +694,26 @@ $(document).ready(function() {
 		$(this).next().toggleClass('active')
 	})
 
-	var init2 = false
-	var swiper2
+	let init2 = false
+	let swiper2 = null
+
 	function swiperTable() {
+		const container = document.querySelector('.price-table__container')
+
+		if (!container) return // на случай, если контейнера нет
+
 		if (window.innerWidth < 991) {
 			if (!init2) {
 				init2 = true
-				swiper2 = new Swiper('.price-table__container', {
+				swiper2 = new Swiper(container, {
 					slidesPerView: 1,
 					spaceBetween: 10,
-					loop: true,
+					loop: false, // временно отключаем loop для надёжности
 					pagination: {
-						el: '.swiper-pagination',
+						el: container.querySelector('.swiper-pagination'),
 						type: 'bullets',
 						clickable: true
 					},
-
 					breakpoints: {
 						992: {
 							slidesPerView: 3
@@ -722,14 +721,201 @@ $(document).ready(function() {
 					}
 				})
 			}
-		} else if (init2) {
-			swiper2.destroy()
-			init2 = false
+		} else {
+			if (init2 && swiper2) {
+				swiper2.destroy(true, true) // полностью удаляем
+				swiper2 = null
+				init2 = false
+			}
 		}
 	}
 
-	swiperTable()
+	window.addEventListener('load', swiperTable)
 	window.addEventListener('resize', swiperTable)
+
+	$(window).on('scroll', function() {
+		const $block = $('.compras-slider')
+
+		if ($block.length === 0) return
+
+		const blockTop = $block.offset().top
+		const blockHeight = $block.outerHeight()
+		const scrollTop = $(window).scrollTop()
+		const windowHeight = $(window).height()
+
+		const blockCenter = blockTop + blockHeight / 2
+		const windowCenter = scrollTop + windowHeight / 2
+		const offset = 150
+
+		if (windowCenter >= blockCenter + offset) {
+			$block.addClass('scroll')
+		} else {
+			$block.removeClass('scroll')
+		}
+	})
+
+	$(function() {
+		var compras = new Swiper('.compras-slider__desktop', {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			navigation: {
+				nextEl: '.compras-slider__next.btn-swiper-next',
+				prevEl: '.compras-slider__prev.btn-swiper-prev'
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true
+			},
+			breakpoints: {
+				992: { slidesPerView: 3 },
+				1500: { slidesPerView: 4 }
+			},
+			on: {
+				init: function() {
+					$('.slider-counter-desktop .total').text(
+						String(this.slides.length).padStart(2, '0')
+					)
+					$('.slider-counter-desktop .current').text('01')
+				},
+				slideChange: function() {
+					$('.slider-counter-desktop .current').text(
+						String(this.realIndex + 1).padStart(2, '0')
+					)
+				}
+			}
+		})
+
+		var init3 = false
+		var swiper3 = null
+
+		function swiperCompras() {
+			var $window = $(window)
+			var $slider = $('.compras-slider__mobile')
+
+			if ($slider.length === 0) return // на случай, если слайдера нет
+
+			if ($window.width() < 991) {
+				if (!init3) {
+					init3 = true
+
+					swiper3 = new Swiper($slider[0], {
+						slidesPerView: 1,
+						spaceBetween: 10,
+						navigation: {
+							nextEl: '.compras-slider__next-mobile.btn-swiper-next',
+							prevEl: '.compras-slider__prev-mobile.btn-swiper-prev'
+						},
+						loop: false, // на всякий случай отключаем loop, если мало слайдов
+						on: {
+							init: function() {
+								var realSlides = this.slides.length / (this.loop ? 2 : 1)
+								$('.slider-counter-mobile .total').text(
+									String(realSlides).padStart(2, '0')
+								)
+								$('.slider-counter-mobile .current').text('01')
+							},
+							slideChange: function() {
+								$('.slider-counter-mobile .current').text(
+									String(this.realIndex + 1).padStart(2, '0')
+								)
+							}
+						}
+					})
+				}
+			} else {
+				if (init3 && swiper3) {
+					swiper3.destroy(true, true)
+					swiper3 = null
+					init3 = false
+				}
+			}
+		}
+
+		swiperCompras()
+		$(window).on('resize', swiperCompras)
+	})
+
+	$('[data-reg-item]').on('click', function() {
+		if (!$(this).hasClass('active')) {
+			var index = $(this).index()
+			$(this).addClass('active').siblings().removeClass('active')
+			$('[data-reg-info]').removeClass('active').eq(index).addClass('active')
+		}
+		return false
+	})
+
+	$('.field').each(function() {
+		const $field = $(this)
+		const $input = $field.find('input[type="text"], input[type="password"]')
+		const $close = $field.find('.field-password__open')
+		const $open = $field.find('.field-password__close')
+
+		$close.hide()
+
+		$open.on('click', function() {
+			$input.attr('type', 'text')
+			$open.hide()
+			$close.show()
+		})
+
+		$close.on('click', function() {
+			$input.attr('type', 'password')
+			$close.hide()
+			$open.show()
+		})
+	})
+
+	$('.reg__btn').on('click', function(e) {
+		e.preventDefault()
+		$('.modal-reg').addClass('open')
+
+		$('.reg-hidden').addClass('active')
+
+		$('body').addClass('hidden')
+	})
+
+	$('.modal-reg .modal__close').on('click', function() {
+		$('.modal-reg').removeClass('open')
+
+		$('.reg-hidden').removeClass('active')
+
+		$('body').removeClass('hidden')
+	})
+
+	$('.checkbox input[type="checkbox"]').on('change', function() {
+		if ($(this).is(':checked')) {
+			$('.modal-reg').addClass('active')
+		} else {
+			$('.modal-reg').removeClass('active')
+		}
+	})
+
+	$('.card-popup__basket').on('click', function() {
+		$(this).hide()
+		$(this).next().show()
+	})
+
+	$('.card__btn').on('click', function(e) {
+		e.preventDefault()
+		$(this).hide()
+		$(this).next().show()
+	})
+
+	$(document).on('click', '.card-calc__plus', function() {
+		const $input = $(this).siblings('input')
+		let val = parseInt($input.val()) || 0
+		$input.val(val + 1)
+	})
+
+	$(document).on('click', '.card-calc__minus', function() {
+		const $input = $(this).siblings('input')
+		let val = parseInt($input.val()) || 0
+
+		if (val > 1) {
+			$input.val(val - 1)
+		}
+	})
 })
 
 

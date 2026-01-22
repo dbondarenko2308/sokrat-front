@@ -1,0 +1,87 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.lk-order {
+  &__top {
+    p {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+
+      @media only screen and (max-width: 991px) {
+        margin-bottom: 15px;
+      }
+    }
+
+    .lk-profile__info {
+      span {
+        font-size: 16px;
+      }
+    }
+    .lk-profile__btn {
+      padding: 15px 25px;
+      width: fit-content;
+
+      @media only screen and (max-width: 991px) {
+        max-width: 100%;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__item {
+    .lk-cabinet__order--item {
+      background: $lgray;
+    }
+
+    .lk-cabinet__order--foot {
+      @media only screen and (max-width: 991px) {
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+
+    .lk-cabinet__order--btn {
+      @media only screen and (max-width: 991px) {
+        width: 100%;
+      }
+    }
+
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+    transition: 300ms;
+
+    @media only screen and (max-width: 991px) {
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    span {
+      background: $lgray;
+      padding: 10px 25px;
+
+      border-radius: 10px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+
+      &.active {
+        background: $primary;
+        color: #fff;
+      }
+    }
+  }
+}
