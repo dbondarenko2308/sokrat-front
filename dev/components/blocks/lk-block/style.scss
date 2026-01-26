@@ -34,7 +34,7 @@
     background: $lgray;
     border-radius: 20px;
     position: sticky;
-    top: 20px;
+    top: 20pxr ;
     left: 0;
 
     @media only screen and (max-width: 991px) {
@@ -131,6 +131,11 @@
     transition: 300ms;
     border-radius: 10px;
     gap: 10px;
+
+
+    @media only screen and (max-width: 991px) {
+      margin-top: 10px;
+    }
 
     &:hover {
       background: $primary;
