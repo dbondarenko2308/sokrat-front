@@ -12,7 +12,13 @@
 
   .feedback {
     &__title {
-      max-width: 87% !important;
+      max-width: 100% !important;
+      margin: 0 auto;
+      margin-bottom: 20px;
+
+      @media only screen and (max-width: 991px) {
+        max-width: 90% !important;
+      }
     }
   }
 

@@ -7,12 +7,29 @@
     margin-bottom: 80px;
   }
 
+  .about-c__label {
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 20px;
+    }
+  }
+
   .about-c {
     &__item {
       background: $lgray;
 
       @media only screen and (max-width: 991px) {
         height: 250px;
+      }
+    }
+
+
+    &__title {
+      margin-bottom: 30px;
+
+      @media only screen and (max-width: 991px) {
+        margin-bottom: 20px;
       }
     }
 
@@ -24,9 +41,12 @@
 
     &-regions {
       background: url('/images/pritok-1.png') 50% 50%;
+      background-size: cover;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      border-radius: 20px;
+      overflow: hidden;
 
       @media only screen and (max-width: 991px) {
         height: 250px;
@@ -45,7 +65,8 @@
     }
 
     &-info {
-      background: url('/images/pritok-2.png') 50% 50%;
+      background: url('/images/pritok-3.png') 50% 50%;
+       background-size: cover;
 
       .about-c__name {
         color: #fff;

@@ -34,7 +34,7 @@
     background: $lgray;
     border-radius: 20px;
     position: sticky;
-    top: 0;
+    top: 20px;
     left: 0;
 
     @media only screen and (max-width: 991px) {
@@ -44,6 +44,7 @@
       width: 100%;
       border: 1px solid $lgray;
       display: none;
+      border: 1px solid $gray;
 
       &.active {
         display: block;
@@ -57,7 +58,7 @@
     @media only screen and (max-width: 991px) {
       display: flex;
       align-items: center;
-      padding: 10px;
+      padding: 10px 15px ;
       border-radius: 10px;
       justify-content: space-between;
       background: $lgray;
@@ -93,6 +94,12 @@
 
       @media only screen and (max-width: 991px) {
         padding: 10px 15px;
+        margin-bottom: 10px;
+
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
 
       &.active {
@@ -104,6 +111,10 @@
             stroke: $primary;
           }
         }
+      }
+
+      &:hover {
+        background: #fff ;
       }
       svg {
         flex-shrink: 0;
@@ -194,6 +205,10 @@
       a {
         font-weight: 600;
         color: $primary;
+
+        &:hover {
+          color: #0078BF;
+        }
       }
 
       &:last-child {
@@ -445,7 +460,7 @@
         margin-bottom: 10px;
 
         &.blue {
-          background: $primary;
+          background: #0078BF;
         }
 
         &.yellow {
@@ -480,6 +495,10 @@
 
       &--date {
         margin-right: 20px;
+
+        @media only screen and (max-width: 991px) {
+          margin-right: 0;
+        }
       }
 
       &--price {
@@ -498,7 +517,7 @@
 
         @media only screen and (max-width: 991px) {
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 1.3fr 1fr;
           grid-gap: 12px;
           width: 100%;
         }

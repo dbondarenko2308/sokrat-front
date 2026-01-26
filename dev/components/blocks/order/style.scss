@@ -201,11 +201,17 @@
     flex-shrink: 0;
     color: $primary;
 
+    &:hover {
+      background: #0078BF;
+      border: 1px solid #0078BF;
+      color: #fff;
+    }
+
     @media only screen and (max-width: 991px) {
       width: 100%;
       flex-shrink: inherit;
       padding: 0;
-      font-size: 13px;
+      font-size: 14px;
     }
   }
 

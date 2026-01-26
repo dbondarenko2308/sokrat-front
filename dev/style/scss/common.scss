@@ -606,8 +606,8 @@ ul {
     position: absolute;
     display: flex;
     align-items: center;
-    right: 20px;
-    top: 20px;
+    right: 15px;
+    top: 15px;
     cursor: pointer;
   }
 
@@ -1006,4 +1006,10 @@ input:checked + .slider:before {
   &.active {
     display: block;
   }
+}
+
+
+.comprare-empty {
+
+
 }

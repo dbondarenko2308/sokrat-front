@@ -27,6 +27,10 @@
     align-items: center;
     justify-content: space-between;
 
+    @media only screen and (max-width: 991px) {
+      align-items: flex-start;
+    }
+
     &.active {
       .garant__arrow {
         transform: rotate(0);

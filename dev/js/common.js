@@ -792,7 +792,7 @@ $(document).ready(function() {
 			var $window = $(window)
 			var $slider = $('.compras-slider__mobile')
 
-			if ($slider.length === 0) return // на случай, если слайдера нет
+			if ($slider.length === 0) return 
 
 			if ($window.width() < 991) {
 				if (!init3) {
@@ -805,7 +805,7 @@ $(document).ready(function() {
 							nextEl: '.compras-slider__next-mobile.btn-swiper-next',
 							prevEl: '.compras-slider__prev-mobile.btn-swiper-prev'
 						},
-						loop: false, // на всякий случай отключаем loop, если мало слайдов
+						loop: false, 
 						on: {
 							init: function() {
 								var realSlides = this.slides.length / (this.loop ? 2 : 1)

@@ -15,8 +15,6 @@
     margin-bottom: 30px;
 
     @media only screen and (max-width: 991px) {
-
-
       position: absolute;
 
       flex-direction: column;
@@ -25,8 +23,9 @@
       border-radius: 20px;
 
       z-index: 10;
-
+      width: calc(100% - 30px);
       display: none;
+      gap: 10px;
 
       &.active {
         display: flex;
@@ -38,6 +37,15 @@
       padding: 10px 25px;
       cursor: pointer;
       border-radius: 10px;
+
+      @media only screen and (max-width: 991px) {
+        background: #fff;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 42px;
+      }
 
       &:hover {
         background: $primary;
@@ -94,6 +102,7 @@
 
     @media only screen and (max-width: 991px) {
       padding: 15px;
+      border-radius: 10px;
     }
   }
 
@@ -129,6 +138,10 @@
       font-weight: 600;
       color: $primary;
 
+      &:hover {
+        color: #0078BF;
+      }
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -139,7 +152,6 @@
       align-items: center;
       gap: 10px;
       margin-bottom: 15px;
-
 
       @media only screen and (max-width: 991px) {
         flex-direction: column;
@@ -156,6 +168,15 @@
         gap: 10px;
         margin-bottom: 0;
 
+        &:hover {
+          color: #0078BF;
+
+          svg {
+            path {
+              stroke: #0078BF;
+            }
+          }
+        }
 
         @media only screen and (max-width: 991px) {
           width: 100%;
@@ -173,7 +194,7 @@
     }
   }
 
-    &__select {
+  &__select {
     display: none;
 
     @media only screen and (max-width: 991px) {
@@ -192,7 +213,6 @@
           transform: rotate(180deg);
         }
       }
-
 
       &--arrow {
         display: flex;

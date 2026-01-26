@@ -3,7 +3,7 @@
     margin-bottom: 50px;
 
     @media only screen and (max-width: 991px) {
-      max-width: 90% !important;
+      max-width: 80% !important;
       margin-bottom: 30px;
     }
   }
@@ -89,9 +89,19 @@
 
   .feedback__btn {
     height: 54px;
+
+    @media only screen and (max-width: 991px) {
+      height: 40px;
+      font-size: 14px;
+    }
   }
 
   .feedback__title {
     max-width: 100% !important;
+
+
+    @media only screen and (max-width: 991px) {
+      max-width: 80% !important;
+    }
   }
 }

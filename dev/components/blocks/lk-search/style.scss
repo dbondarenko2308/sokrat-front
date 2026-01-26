@@ -94,6 +94,11 @@
     background: rgba(170, 0, 0, 0.1);
     color: #a00;
 
+
+    @media only screen and (max-width: 991px) {
+      align-items: flex-start;
+    }
+
     b {
       font-weight: 600;
     }
